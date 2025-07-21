@@ -4,6 +4,7 @@
 
 </div>
 
+
 <img width="2400" height="480" alt="Context_Engineering_Banner_Extended" src="https://github.com/user-attachments/assets/aafb8a5d-4e63-4c89-a0d2-6ca9743c40d2" />
 
 > **"Context engineering is the delicate art and science of filling the context window with just the right information for the next step." — [**Andrej Karpathy**](https://x.com/karpathy/status/1937902205765607626)**
@@ -16,6 +17,8 @@
 ## [Comprehensive Course Under Construction](https://github.com/davidkimai/Context-Engineering/tree/main/00_COURSE)
 
 > ### **[From A Systematic Analysis of Over 1400 Research Papers — A Survey of Context Engineering for Large Language Models](https://arxiv.org/pdf/2507.13334)**
+>
+> [**Awesome Context Engineering**](https://github.com/Meirtz/Awesome-Context-Engineering)
 
 Operationalizing the Latest Research on Context With First Principles & Visuals — July 2025 from ICML, IBM, NeurIPS, OHBM, and more 
 
