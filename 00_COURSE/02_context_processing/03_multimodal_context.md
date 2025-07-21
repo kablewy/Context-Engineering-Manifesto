@@ -387,36 +387,36 @@ Based on the query "{primary_query}", allocate attention as follows:
 ### Synthesis Strategy Selection
 
 #### Approach 1: Hierarchical Integration
-```
+
 IF query_requires_factual_accuracy AND data_modality_available:
     PRIMARY: Data and Text
     SECONDARY: Visual and Audio for context and verification
     SYNTHESIS: Build factual foundation, then add contextual richness
-```
+
 
 #### Approach 2: Experiential Integration  
-```
+
 IF query_requires_subjective_understanding OR emotional_assessment:
     PRIMARY: Visual and Audio for immediate impression
     SECONDARY: Text and Data for intellectual framework
     SYNTHESIS: Lead with sensory experience, support with analysis
-```
+
 
 #### Approach 3: Balanced Multidimensional Integration
-```
+
 IF query_requires_comprehensive_understanding:
     EQUAL WEIGHT: All available modalities
     SYNTHESIS: Create unified representation that preserves unique contributions
-```
+
 
 #### Approach 4: Dynamic Query-Driven Integration
-```
+
 ANALYZE query_components:
     FOR each query_aspect:
         IDENTIFY most_informative_modality_for_aspect
         ALLOCATE attention_proportionally
     SYNTHESIS: Aspect-specific modal emphasis with global coherence
-```
+
 
 ## Integration Execution
 
