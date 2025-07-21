@@ -103,7 +103,7 @@ Where:
 Component assessment prompts provide systematic approaches to understanding individual component characteristics and capabilities.
 
 ### Comprehensive Component Analysis Template
-```markdown
+```python
 # Component Deep Analysis Framework
 
 ## Component Identification and Context
@@ -141,7 +141,7 @@ Focus on understanding this component in isolation before considering system int
 
 ### 2. Performance Characterization
 **Speed and Efficiency**:
-```
+
 Response_Time = f(Input_Size, Complexity, System_Load)
 
 Measure across different conditions:
@@ -149,27 +149,27 @@ Measure across different conditions:
 - Simple and complex processing requirements
 - Low and high system resource availability
 - Cold start vs. warm operation
-```
+
 
 **Resource Utilization**:
-```
+
 Resource_Profile = {
     CPU_Usage: [baseline, average, peak],
     Memory_Consumption: [initial, steady_state, maximum],
     I/O_Patterns: [read_intensity, write_intensity, network_usage],
     Storage_Requirements: [temporary, persistent, cache]
 }
-```
+
 
 **Scalability Characteristics**:
-```
+
 Scalability_Analysis = {
     Throughput_Scaling: "How performance changes with load",
     Concurrent_Processing: "Multi-request handling capability",
     Resource_Scaling: "Performance vs. resource allocation",
     Degradation_Patterns: "How performance degrades under stress"
 }
-```
+
 
 ### 3. Robustness and Reliability Assessment
 **Error Handling Evaluation**:
