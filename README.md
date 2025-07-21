@@ -18,7 +18,7 @@
 
 > ### **[From A Systematic Analysis of Over 1400 Research Papers — A Survey of Context Engineering for Large Language Models](https://arxiv.org/pdf/2507.13334)**
 >
-> [**Awesome Context Engineering**](https://github.com/Meirtz/Awesome-Context-Engineering)
+> [**Awesome Context Engineering Repo**](https://github.com/Meirtz/Awesome-Context-Engineering)
 
 Operationalizing the Latest Research on Context With First Principles & Visuals — July 2025 from ICML, IBM, NeurIPS, OHBM, and more 
 
