@@ -50,6 +50,12 @@ A frontier, first-principles handbook for moving beyond prompt engineering to th
                                         │     tools, state, control flow)
 ```
 
+## Definition of Context Engineering
+
+> **Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.**
+>
+> — [**Definition of Context Engineering from A Systematic Analysis of Over 1400 Research Papers**](https://arxiv.org/pdf/2507.13334)
+
 ```
 ╭─────────────────────────────────────────────────────────────╮
 │              CONTEXT ENGINEERING MASTERY COURSE             │
@@ -74,11 +80,7 @@ A frontier, first-principles handbook for moving beyond prompt engineering to th
 │ Management  │ │ Agent Systems│ │ Evaluation   │ │ Collaboration│
 └─────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
 ```
-## Definition of Context Engineering
 
-> **Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.**
->
-> — [**Definition of Context Engineering from A Systematic Analysis of Over 1400 Research Papers**](https://arxiv.org/pdf/2507.13334)
 
 ## Why This Repository Exists
 
