@@ -194,7 +194,7 @@ For each sub-question, analyze available evidence:
 
 ### Step 3: Reasoning Chain Construction
 Build logical connections between evidence and conclusions:
-```
+
 Premise 1: [statement with evidence]
     ├─ Supporting detail A
     ├─ Supporting detail B
@@ -207,7 +207,7 @@ Premise 2: [statement with evidence]
 
 Intermediate Conclusion: [logical inference from premises]
     └─ Reasoning: [explain the logical connection]
-```
+
 
 ### Step 4: Alternative Hypothesis Consideration
 What other explanations or solutions are possible?
