@@ -50,7 +50,30 @@ A frontier, first-principles handbook for moving beyond prompt engineering to th
                                         │     tools, state, control flow)
 ```
 
-
+```
+╭─────────────────────────────────────────────────────────────╮
+│              CONTEXT ENGINEERING MASTERY COURSE             │
+│                    From Zero to Frontier                    │
+╰─────────────────────────────────────────────────────────────╯
+                          ▲
+                          │
+                 Mathematical Foundations
+                  C = A(c₁, c₂, ..., cₙ)
+                          │
+                          ▼
+┌─────────────┬──────────────┬──────────────┬─────────────────┐
+│ FOUNDATIONS │ SYSTEM IMPL  │ INTEGRATION  │ FRONTIER        │
+│ (Weeks 1-4) │ (Weeks 5-8)  │ (Weeks 9-10) │ (Weeks 11-12)   │
+└─────┬───────┴──────┬───────┴──────┬───────┴─────────┬───────┘
+      │              │              │                 │
+      ▼              ▼              ▼                 ▼
+┌─────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Math Models │ │ RAG Systems  │ │ Multi-Agent  │ │ Meta-Recurs  │
+│ Components  │ │ Memory Arch  │ │ Orchestrat   │ │ Quantum Sem  │
+│ Processing  │ │ Tool Integr  │ │ Field Theory │ │ Self-Improv  │
+│ Management  │ │ Agent Systems│ │ Evaluation   │ │ Collaboration│
+└─────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
+```
 ## Definition of Context Engineering
 
 > **Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.**
