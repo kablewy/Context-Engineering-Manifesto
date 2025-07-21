@@ -2124,7 +2124,7 @@ class LongContextEvaluator:
         
         primary_key = score_keys.get(metric_name, list(metric_results.keys())[0])
         return metric_results.get(primary_key, 0.5)  # Default to neutral score
-
+```
 # Research Connections and Future Directions
 
 ## Connection to Context Engineering Survey
