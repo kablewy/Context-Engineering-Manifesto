@@ -54,7 +54,7 @@ This mathematical foundations sequence follows a carefully designed progression 
 ```
     Mathematical Mastery Progression
     
-    Week 1-2: FORMALIZATION
+             FORMALIZATION
     ┌─────────────────────────────────┐
     │ C = A(c₁, c₂, c₃, c₄, c₅, c₆)  │
     │                                 │
@@ -64,7 +64,7 @@ This mathematical foundations sequence follows a carefully designed progression 
     │ analysis and optimization       │
     └─────────────────────────────────┘
                     ↓
-    Week 3-4: OPTIMIZATION
+              OPTIMIZATION
     ┌─────────────────────────────────┐
     │ F* = arg max E[Reward(C)]       │
     │                                 │
@@ -74,7 +74,7 @@ This mathematical foundations sequence follows a carefully designed progression 
     │ systematic search strategies    │
     └─────────────────────────────────┘
                     ↓
-    Week 5-6: INFORMATION THEORY
+            INFORMATION THEORY
     ┌─────────────────────────────────┐
     │ I(Context; Query) maximization  │
     │                                 │
@@ -84,7 +84,7 @@ This mathematical foundations sequence follows a carefully designed progression 
     │ mathematical information theory │
     └─────────────────────────────────┘
                     ↓
-    Week 7-8: BAYESIAN INFERENCE
+            BAYESIAN INFERENCE
     ┌─────────────────────────────────┐
     │ P(Strategy|Evidence) updating   │
     │                                 │
