@@ -12,7 +12,7 @@
 >
 > "You can't connect the dots looking forward; you can only connect them looking backwards."
 >
-> — [Steve Jobs](https://www.youtube.com/watch?v=UF8uR6Z6KLc)
+> — [**Steve Jobs 2005 Stanford Commencement Address**](https://www.youtube.com/watch?v=UF8uR6Z6KLc)
 
 ## Course Architecture Overview
 
