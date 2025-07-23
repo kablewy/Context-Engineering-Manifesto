@@ -1,12 +1,17 @@
 # Graph-Enhanced RAG: Knowledge Graph Integration
+图增强 RAG：知识图谱集成
 
 ## Overview
+概述
 
 Graph-Enhanced RAG represents a paradigm shift from linear text-based retrieval to structured, relationship-aware information systems. By integrating knowledge graphs into RAG architectures, we unlock the power of semantic relationships, multi-hop reasoning, and structured knowledge representation. This approach embodies Software 3.0 principles through graph-aware prompting (relational communication), graph algorithm programming (structural implementation), and knowledge orchestration protocols (semantic coordination).
+图增强 RAG 代表了从线性文本检索到结构化、关系感知的信息系统的范式转变。通过将知识图谱集成到 RAG 架构中，我们解锁了语义关系、多跳推理和结构化知识表示的力量。这种方法通过图感知提示（关系通信）、图算法编程（结构化实现）和知识编排协议（语义协调）体现了软件 3.0 原则。
 
 ## The Graph Paradigm in RAG
+RAG 中的图范式
 
 ### Traditional RAG vs. Graph-Enhanced RAG
+传统 RAG 与图增强 RAG
 
 ```
 TRADITIONAL TEXT-BASED RAG
@@ -39,6 +44,7 @@ Graph Traversal →
 ```
 
 ### Software 3.0 Graph Architecture
+软件 3.0 图架构
 
 ```
 GRAPH-ENHANCED RAG SOFTWARE 3.0 STACK
@@ -64,10 +70,13 @@ Layer 1: PROMPT COMMUNICATION (Relational Dialogue)
 ```
 
 ## Progressive Complexity Layers
+渐进式复杂度层
 
 ### Layer 1: Basic Graph Integration (Foundation)
+层 1：基础图集成（基础）
 
 #### Graph-Aware Prompt Templates
+图感知提示模板
 
 ```
 GRAPH_QUERY_TEMPLATE = """
@@ -114,6 +123,7 @@ Integrate graph relationships with textual information to provide:
 ```
 
 #### Basic Graph RAG Programming
+基础图 RAG 编程
 
 ```python
 class BasicGraphRAG:
@@ -199,6 +209,7 @@ class BasicGraphRAG:
 ```
 
 #### Basic Graph Protocol
+基础图协议
 
 ```
 /graph.rag.basic{
@@ -249,8 +260,10 @@ class BasicGraphRAG:
 ```
 
 ### Layer 2: Multi-Hop Reasoning Systems (Intermediate)
+第二层：多跳推理系统（中级）
 
 #### Advanced Graph Reasoning Templates
+高级图推理模板
 
 ```
 MULTI_HOP_REASONING_TEMPLATE = """
@@ -307,6 +320,7 @@ Completeness assessment: {completeness_score}
 ```
 
 #### Multi-Hop Graph RAG Programming
+多跳图 RAG 编程
 
 ```python
 class MultiHopGraphRAG(BasicGraphRAG):
@@ -410,6 +424,7 @@ class MultiHopGraphRAG(BasicGraphRAG):
 ```
 
 #### Multi-Hop Reasoning Protocol
+多跳推理协议
 
 ```
 /graph.rag.multi.hop{
@@ -477,8 +492,10 @@ class MultiHopGraphRAG(BasicGraphRAG):
 ```
 
 ### Layer 3: Semantic Graph Intelligence (Advanced)
+第三层：语义图智能（高级）
 
 #### Semantic Intelligence Templates
+语义智能模板
 
 ```
 SEMANTIC_GRAPH_INTELLIGENCE_TEMPLATE = """
@@ -555,6 +572,7 @@ Intelligence amplification achieved:
 ```
 
 #### Semantic Graph Intelligence Programming
+语义图智能编程
 
 ```python
 class SemanticGraphIntelligence(MultiHopGraphRAG):
@@ -688,6 +706,7 @@ class SemanticGraphIntelligence(MultiHopGraphRAG):
 ```
 
 #### Semantic Intelligence Protocol
+语义智能协议
 
 ```
 /graph.intelligence.semantic{
@@ -764,8 +783,10 @@ class SemanticGraphIntelligence(MultiHopGraphRAG):
 ```
 
 ## Graph Construction and Evolution
+图构建与进化
 
 ### Dynamic Graph Construction
+动态图构建
 
 ```python
 class DynamicGraphConstructor:
@@ -825,6 +846,7 @@ class DynamicGraphConstructor:
 ```
 
 ### Graph Visualization and Interaction
+图可视化与交互
 
 ```
 INTERACTIVE GRAPH EXPLORATION
@@ -867,8 +889,10 @@ Interactive Elements:
 ```
 
 ## Performance and Scalability
+性能与可扩展性
 
 ### Graph Processing Optimization
+图处理优化
 
 ```
 GRAPH RAG PERFORMANCE ARCHITECTURE
@@ -907,8 +931,10 @@ Integration Layer
 ```
 
 ## Integration Examples
+集成示例
 
 ### Complete Graph-Enhanced RAG System
+完整的图增强 RAG 系统
 
 ```python
 class ComprehensiveGraphRAG:
@@ -970,37 +996,61 @@ class ComprehensiveGraphRAG:
 ```
 
 ## Future Directions
+未来方向
 
 ### Emerging Graph Technologies
+新兴图技术
 
-1. **Hypergraph RAG**: Extension to hypergraphs for representing complex multi-entity relationships
-2. **Temporal Graph RAG**: Integration of time-aware graph structures for temporal reasoning
-3. **Probabilistic Graph RAG**: Uncertainty-aware graph reasoning with probabilistic relationships
-4. **Neural-Symbolic Graph RAG**: Integration of neural graph networks with symbolic reasoning
-5. **Cross-Modal Graph RAG**: Graphs that integrate text, images, audio, and structured data
+1.  **Hypergraph RAG**: Extension to hypergraphs for representing complex multi-entity relationships
+    超图 RAG：扩展超图以表示复杂的多实体关系
+2.  **Temporal Graph RAG**: Integration of time-aware graph structures for temporal reasoning
+    时序图 RAG：集成时序感知图结构以进行时序推理
+3.  **Probabilistic Graph RAG**: Uncertainty-aware graph reasoning with probabilistic relationships
+    概率图 RAG：具有概率关系的感知不确定性的图推理
+4.  **Neural-Symbolic Graph RAG**: Integration of neural graph networks with symbolic reasoning
+    神经符号图 RAG：集成神经图网络与符号推理
+5.  **Cross-Modal Graph RAG**: Graphs that integrate text, images, audio, and structured data
+    跨模态图 RAG：整合文本、图像、音频和结构化数据的图
 
 ### Research Frontiers
+研究前沿
 
-- **Graph Neural Network Integration**: Combining graph neural networks with traditional graph algorithms for learned graph representations
-- **Emergent Graph Structure Discovery**: Automatic discovery of novel graph patterns and structures through reasoning sessions
-- **Multi-Scale Graph Reasoning**: Reasoning across different levels of abstraction within the same graph structure
-- **Federated Graph Intelligence**: Distributed graph reasoning across multiple organizations while preserving privacy
-- **Quantum Graph Algorithms**: Leveraging quantum computing for exponentially faster graph traversal and reasoning
+*   **Graph Neural Network Integration**: Combining graph neural networks with traditional graph algorithms for learned graph representations
+    图神经网络集成：将图神经网络与传统图算法结合，用于学习图表示
+*   **Emergent Graph Structure Discovery**: Automatic discovery of novel graph patterns and structures through reasoning sessions
+    涌现图结构发现：通过推理会话自动发现新的图模式和结构
+*   **Multi-Scale Graph Reasoning**: Reasoning across different levels of abstraction within the same graph structure
+    多尺度图推理：在同一图结构中跨不同抽象层次进行推理
+*   **Federated Graph Intelligence**: Distributed graph reasoning across multiple organizations while preserving privacy
+    联邦图智能：在多个组织间分布式进行图推理，同时保护隐私
+*   **Quantum Graph Algorithms**: Leveraging quantum computing for exponentially faster graph traversal and reasoning
+    量子图算法：利用量子计算实现指数级更快的图遍历和推理
 
 ## Conclusion
+结论
 
 Graph-Enhanced RAG represents a fundamental advancement in context engineering, transforming information retrieval from linear text processing to sophisticated relationship-aware reasoning. Through the integration of Software 3.0 principles—graph-aware prompting for relational communication, graph algorithm programming for structural implementation, and knowledge orchestration protocols for semantic coordination—these systems achieve unprecedented reasoning capabilities.
+图增强 RAG 代表了上下文工程的根本性进步，将信息检索从线性文本处理转变为关系感知推理。通过整合软件 3.0 原则——关系通信的图感知提示、结构实现的图算法编程、语义协调的知识编排协议——这些系统实现了前所未有的推理能力。
 
 The progressive complexity layers demonstrate the evolution from basic graph integration through multi-hop reasoning to advanced semantic intelligence. Each layer builds upon the previous, creating systems capable of increasingly sophisticated understanding and novel insight generation.
+渐进式复杂层级展示了从基本图集成到多跳推理再到高级语义智能的演进。每一层都建立在之前的基础上，创造出能够进行日益复杂理解和生成新颖见解的系统。
 
 Key achievements of graph-enhanced RAG include:
+图增强 RAG 的关键成就包括：
 
-- **Relationship-Aware Retrieval**: Moving beyond keyword matching to understanding semantic relationships and contextual connections
-- **Multi-Hop Reasoning**: Enabling complex reasoning chains that traverse multiple relationship paths to reach comprehensive conclusions
-- **Dynamic Knowledge Construction**: Automatically discovering and integrating new relationships and concepts based on reasoning sessions
-- **Cross-Graph Intelligence**: Reasoning across multiple knowledge graphs to achieve comprehensive understanding
-- **Emergent Insight Generation**: Discovering novel connections and insights that emerge from sophisticated graph reasoning
+*   **Relationship-Aware Retrieval**: Moving beyond keyword matching to understanding semantic relationships and contextual connections
+    关系感知检索：超越关键词匹配，理解语义关系和上下文连接
+*   **Multi-Hop Reasoning**: Enabling complex reasoning chains that traverse multiple relationship paths to reach comprehensive conclusions
+    多跳推理：实现跨越多个关系路径的复杂推理链，以得出全面结论
+*   **Dynamic Knowledge Construction**: Automatically discovering and integrating new relationships and concepts based on reasoning sessions
+    动态知识构建：根据推理会话自动发现和整合新的关系和概念
+*   **Cross-Graph Intelligence**: Reasoning across multiple knowledge graphs to achieve comprehensive understanding
+    跨图谱智能：通过推理多个知识图谱实现全面理解
+*   **Emergent Insight Generation**: Discovering novel connections and insights that emerge from sophisticated graph reasoning
+    涌现式洞察生成：通过复杂的图谱推理发现新出现的联系和洞察
 
 As these systems continue to evolve, they will enable AI applications that can reason about complex, interconnected domains with the sophistication approaching human-level conceptual understanding, while maintaining the scalability and consistency advantages of computational systems.
+随着这些系统持续进化，它们将使 AI 应用能够对复杂、相互关联的领域进行推理，其复杂程度接近人类水平的概念理解，同时保持计算系统的可扩展性和一致性优势。
 
 The next document will explore advanced applications and domain-specific implementations that demonstrate how these graph-enhanced capabilities translate into practical, real-world solutions across diverse fields and use cases.
+下一份文档将探讨高级应用和特定领域的实现，展示这些图谱增强能力如何转化为跨不同领域和用例的实际、现实解决方案。
