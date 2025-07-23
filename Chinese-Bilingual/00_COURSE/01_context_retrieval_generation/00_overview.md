@@ -1,51 +1,78 @@
 # Context Retrieval and Generation
+上下文检索和生成
+
 ## From Static Prompts to Dynamic Knowledge Orchestration
+从静态提示到动态知识编排
 
 > **Module 01** | *Context Engineering Course: From Foundations to Frontier Systems*
+> **模块 01** | *上下文工程课程：从基础到前沿系统*
 > 
 > Building on [Context Engineering Survey](https://arxiv.org/pdf/2507.13334) | Advancing Software 3.0 Paradigms
+> 基于[情境工程调查](https://arxiv.org/pdf/2507.13334) |推进软件 3.0 范式
 
----
+* * *
 
 ## Learning Objectives
+学习目标
 
 By the end of this module, you will understand and implement:
+在本模块结束时，您将了解并实现：
 
-- **Advanced Prompt Engineering**: From basic prompts to sophisticated reasoning templates
-- **External Knowledge Integration**: RAG foundations and dynamic knowledge retrieval
-- **Dynamic Context Assembly**: Real-time composition of multi-source information
-- **Strategic Context Orchestration**: Optimization of information payload for maximum model effectiveness
+*   **Advanced Prompt Engineering**: From basic prompts to sophisticated reasoning templates
+    **高级提示工程** ：从基本提示到复杂的推理模板
+*   **External Knowledge Integration**: RAG foundations and dynamic knowledge retrieval
+    **外部知识整合** ：RAG 基础和动态知识检索
+*   **Dynamic Context Assembly**: Real-time composition of multi-source information
+    **动态上下文汇编** ：多源信息的实时组合
+*   **Strategic Context Orchestration**: Optimization of information payload for maximum model effectiveness
+    **战略上下文编排** ：优化信息有效负载以实现最大模型效率
 
----
+* * *
 
 ## Conceptual Progression: Static Text to Intelligent Knowledge Orchestration
+概念进展：静态文本到智能知识编排
 
 Think of context generation like the evolution of how we provide information to someone solving a problem - from handing them a single document, to organizing a research library, to having an intelligent research assistant who knows exactly what information to gather and how to present it.
+将上下文生成想象成我们向解决问题的人提供信息的方式的演变——从向他们递交一份文档，到组织一个研究图书馆，再到拥有一个聪明的研究助理，他确切地知道要收集什么信息以及如何呈现这些信息。
 
 ### Stage 1: Static Prompt Engineering
+第一阶段：静态提示工程
+
 ```
 "Solve this problem: [problem description]"
 ```
+
 **Context**: Like giving someone a single instruction sheet. Simple and direct, but limited by what you can fit in one document.
+**上下文** ：就像给某人一张说明书一样。简单直接，但受限于一个文档中可以容纳的内容。
 
 ### Stage 2: Enhanced Prompt Patterns
+第 2 阶段：增强的提示模式
+
 ```
 "Let's think step by step:
 1. First, understand the problem...
 2. Then consider approaches...
 3. Finally implement the solution..."
 ```
+
 **Context**: Like providing a structured methodology. More effective because it guides thinking process, but still constrained by static content.
+**上下文** ：就像提供结构化的方法一样。更有效，因为它指导思维过程，但仍然受到静态内容的限制。
 
 ### Stage 3: External Knowledge Integration
+第三阶段：外部知识整合
+
 ```
 [Retrieved relevant information from knowledge base]
 "Given the following context: [external knowledge]
 Now solve: [problem]"
 ```
+
 **Context**: Like having access to a research library. Much more powerful because it can include specialized, current information beyond what fits in working memory.
+**背景** ：就像访问研究图书馆一样。功能强大得多，因为它可以包含超出工作记忆范围的专业最新信息。
 
 ### Stage 4: Dynamic Context Assembly
+第 4 阶段：动态上下文汇编
+
 ```
 Context = Assemble(
     task_instructions + 
@@ -55,9 +82,13 @@ Context = Assemble(
     real_time_data
 )
 ```
+
 **Context**: Like having a research assistant who gathers exactly the right information from multiple sources and organizes it optimally for your specific task.
+**背景** ：就像有一名研究助理从多个来源收集准确正确的信息，并针对您的特定任务进行最佳组织。
 
 ### Stage 5: Intelligent Context Orchestration
+第 5 阶段：智能上下文编排
+
 ```
 Adaptive Context System:
 - Understands your goals and constraints
@@ -65,54 +96,82 @@ Adaptive Context System:
 - Learns from outcomes to improve future context assembly
 - Balances relevance, completeness, and cognitive load
 ```
-**Context**: Like having an AI research partner who understands not just what you need to know, but how you think and learn, continuously optimizing the information environment for maximum effectiveness.
 
----
+**Context**: Like having an AI research partner who understands not just what you need to know, but how you think and learn, continuously optimizing the information environment for maximum effectiveness.
+**背景** ：就像拥有一个人工智能研究合作伙伴，他不仅了解您需要知道什么，还了解您如何思考和学习，不断优化信息环境以实现最大效率。
+
+* * *
 
 ## Mathematical Foundations
+数学基础
 
 ### Context Formalization Framework
+上下文形式化框架
+
 From our core mathematical foundation:
+从我们的核心数学基础来看：
+
 ```
 C = A(cinstr, cknow, ctools, cmem, cstate, cquery)
 ```
 
 In this module, we focus primarily on **cknow** (external knowledge) and the assembly function **A**, specifically:
+在本模块中，我们主要关注 **cknow**（外部知识）和汇编函数 **A**，具体来说：
 
 ```
 cknow = R(cquery, K)
 ```
 
 Where:
-- **R** is the retrieval function
-- **cquery** is the user's immediate request  
-- **K** is the external knowledge base
+哪里：
+
+*   **R** is the retrieval function
+    **R** 是检索函数
+*   **cquery** is the user's immediate request
+    **cquery** 是用户的即时请求
+*   **K** is the external knowledge base
+    **K** 是外部知识库
 
 ### Information-Theoretic Optimization
+信息论优化
+
 The optimal retrieval function maximizes relevant information:
+最佳检索功能最大化相关信息：
+
 ```
 R* = arg max_R I(Y*; cknow | cquery)
 ```
 
-Where **I(Y*; cknow | cquery)** is the mutual information between the target response **Y*** and the retrieved knowledge **cknow**, given the query **cquery**.
+Where **I(Y*; cknow | cquery)*\* is the mutual information between the target response **Y**\* and the retrieved knowledge **cknow**, given the query **cquery**.
+其中 **I（Y*; cknow | cquery）*\* 是目标响应 **Y**\* 和检索到的知识 **cknow** 之间的相互信息，给定查询 **cquery**。
 
 **Intuitive Explanation**: We want to retrieve information that tells us the most about what the correct answer should be. This is like a skilled librarian who doesn't just find books on your topic, but finds the specific books that contain the exact insights you need.
+**直观的解释** ：我们想要检索最能告诉我们正确答案应该是什么的信息。这就像一位熟练的图书馆员，他不仅会找到有关您主题的书籍，还会找到包含您需要的确切见解的特定书籍。
 
 ### Dynamic Assembly Optimization
+动态装配优化
+
 ```
 A*(cinstr, cknow, cmem, cquery) = arg max_A P(Y* | A(...)) × Efficiency(A)
 ```
 
 Subject to constraints:
-- `|A(...)| ≤ Lmax` (context window limit)
-- `Quality(cknow) ≥ threshold` (information quality threshold)
-- `Relevance(cknow, cquery) ≥ min_relevance` (relevance threshold)
+受限制：
+
+*   `|A(...)| ≤ Lmax` (context window limit)
+    `|答（...）|≤ Lmax`（上下文窗口限制）
+*   `Quality(cknow) ≥ threshold` (information quality threshold)
+    `质量（cknow）≥阈值` （信息质量阈值）
+*   `Relevance(cknow, cquery) ≥ min_relevance` (relevance threshold)
+    `Relevance(cknow, cquery) ≥ min_relevance` （相关性阈值）
 
 **Intuitive Explanation**: The assembly function is like a master editor who knows how to combine different pieces of information into a coherent, effective brief that maximizes the chance of getting a great response while staying within practical limits.
+**直观的解释** ：组装功能就像一位编辑大师，知道如何将不同的信息组合成一个连贯、有效的简报，从而最大限度地提高获得良好响应的机会，同时保持在实际限制内。
 
----
+* * *
 
 ## Visual Architecture: The Context Engineering Stack
+可视化架构：上下文工程堆栈
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -153,17 +212,26 @@ Subject to constraints:
 ```
 
 **Ground-up Explanation**: This stack shows how context engineering builds up from basic prompts to sophisticated information orchestration. Each layer adds capability:
-- **Bottom Layer**: Core prompt engineering - how to communicate effectively with LLMs
-- **Middle Layer**: Knowledge retrieval - how to find and access relevant external information  
-- **Top Layer**: Context assembly - how to combine everything optimally
+**从头开始解释** ：此堆栈展示了上下文工程如何从基本提示到复杂的信息编排。每一层都增加了功能：
 
----
+*   **Bottom Layer**: Core prompt engineering - how to communicate effectively with LLMs
+    **底层** ：核心提示工程 - 如何与 LLM 进行有效沟通
+*   **Middle Layer**: Knowledge retrieval - how to find and access relevant external information
+    **中间层** ：知识检索 - 如何查找和访问相关的外部信息
+*   **Top Layer**: Context assembly - how to combine everything optimally
+    **顶层** ：上下文组装 - 如何以最佳方式组合所有内容
+
+* * *
 
 ## Software 3.0 Paradigm 1: Prompts (Strategic Templates)
+软件 3.0 范式 1：提示（战略模板）
 
 Prompts in context engineering go beyond simple instructions to become strategic templates for information gathering and reasoning.
+上下文工程中的提示超越了简单的指令，成为信息收集和推理的战略模板。
 
 ### Advanced Reasoning Template
+高级推理模板
+
 ```markdown
 # Chain-of-Thought Reasoning Framework
 
@@ -234,8 +302,11 @@ What other explanations or solutions are possible?
 ```
 
 **Ground-up Explanation**: This template transforms the simple "let's think step by step" approach into a comprehensive reasoning methodology. It's like having a master logician guide your thinking process, ensuring you consider all angles, make explicit connections, and assess your own reasoning quality.
+**从头开始的解释** ：该模板将简单的“让我们一步一步思考”的方法转变为全面的推理方法。这就像让逻辑大师指导你的思维过程，确保你考虑各个角度，建立明确的联系，并评估你自己的推理质量。
 
 ### Dynamic Knowledge Integration Template
+动态知识整合模板
+
 ```xml
 <knowledge_integration_template>
   <intent>Systematically integrate external knowledge with user query for optimal response</intent>
@@ -312,12 +383,15 @@ What other explanations or solutions are possible?
 ```
 
 **Ground-up Explanation**: This XML template structures the complex process of finding and integrating external knowledge. It's like having a research methodology that ensures you not only find relevant information, but organize and present it in the most effective way for the specific user and task.
+**从头开始的解释** ：这个 XML 模板构建了查找和整合外部知识的复杂过程。这就像拥有一种研究方法，可以确保您不仅可以找到相关信息，还可以针对特定用户和任务以最有效的方式组织和呈现信息。
 
----
+* * *
 
 ## Software 3.0 Paradigm 2: Programming (Retrieval Algorithms)
+软件 3.0 范式 2：编程（检索算法）
 
 Programming provides the computational mechanisms for intelligent context retrieval and assembly.
+编程为智能上下文检索和汇编提供了计算机制。
 
 ### Semantic Retrieval Engine
 
@@ -878,14 +952,18 @@ class MockResult:
 ```
 
 **Ground-up Explanation**: This retrieval system works like having multiple research assistants with different specialties, plus a master editor who knows how to combine their findings into the perfect briefing document. The `HybridKnowledgeRetriever` gets input from multiple sources, the `DynamicContextAssembler` organizes everything optimally, and the system learns from feedback to get better over time.
+**从头开始**解释：这个检索系统的工作原理就像拥有多个不同专业的研究助理，以及一位知道如何将他们的发现组合成完美简报文件的大师级编辑。`HybridKnowledgeRetriever` 从多个来源获取输入，`DynamicContextAssembler` 以最佳方式组织所有内容，系统从反馈中学习，随着时间的推移变得更好。
 
----
+* * *
 
 ## Software 3.0 Paradigm 3: Protocols (Adaptive Assembly Shells)
+软件 3.0 范式 3：协议（自适应汇编 Shell）
 
 Protocols provide self-modifying context generation patterns that evolve based on effectiveness.
+协议提供根据有效性演变的自我修改上下文生成模式。
 
 ### Adaptive Context Generation Protocol
+自适应上下文生成协议
 
 ```
 /context.generate.adaptive{
@@ -1017,12 +1095,15 @@ Protocols provide self-modifying context generation patterns that evolve based o
 ```
 
 **Ground-up Explanation**: This protocol creates a self-improving context generation system. Like having a research team that gets better at finding and organizing information each time they work on a project, learning what kinds of information are most valuable for different types of questions and users.
+**从头开始的解释** ：该协议创建了一个自我改进的上下文生成系统。就像拥有一个研究团队，每次处理项目时都能更好地查找和组织信息，了解哪些类型的信息对不同类型的问题和用户最有价值。
 
----
+* * *
 
 ## Integration and Real-World Applications
+集成和实际应用
 
 ### Case Study: Medical Diagnosis Support Context Generation
+案例研究：医疗诊断支持上下文生成
 
 ```python
 def medical_diagnosis_context_example():
@@ -1058,6 +1139,7 @@ def medical_diagnosis_context_example():
 ```
 
 ### Performance Evaluation Framework
+绩效评估框架
 
 ```python
 class ContextGenerationEvaluator:
@@ -1139,13 +1221,18 @@ class ContextGenerationEvaluator:
 ```
 
 **Ground-up Explanation**: This evaluation framework works like having a comprehensive quality control system that looks at context generation from multiple angles - not just whether it worked, but how well it worked and how it could be improved.
+**从头开始的解释** ：这个评估框架的工作原理就像拥有一个全面的质量控制系统，从多个角度查看上下文生成——不仅仅是它是否有效，还有它的工作效果如何以及如何改进它。
 
----
+* * *
 
 ## Practical Exercises and Next Steps
+实践练习和后续步骤
 
 ### Exercise 1: Build Your Own Retrieval System
+练习 1：构建您自己的检索系统
+
 **Goal**: Implement a basic semantic retrieval system
+**目标** ：实现基本的语义检索系统
 
 ```python
 # Your implementation template
@@ -1170,7 +1257,10 @@ retriever = BasicRetriever()
 ```
 
 ### Exercise 2: Context Assembly Optimization
+练习 2：上下文装配优化
+
 **Goal**: Create a context assembler that optimizes information organization
+**目标** ：创建优化信息组织的上下文汇编器
 
 ```python
 class ContextOptimizer:
@@ -1183,32 +1273,54 @@ class ContextOptimizer:
         pass
 ```
 
----
+* * *
 
 ## Summary and Next Steps
+总结和后续步骤
 
 **Core Concepts Mastered**:
-- Evolution from static prompts to dynamic context orchestration
-- Information-theoretic optimization of knowledge retrieval
-- Multi-source retrieval strategies and result fusion
-- Adaptive context assembly with learning integration
-- Comprehensive evaluation of context generation effectiveness
+**掌握的核心概念** ：
+
+*   Evolution from static prompts to dynamic context orchestration
+    从静态提示到动态上下文编排的演变
+*   Information-theoretic optimization of knowledge retrieval
+    知识检索的信息论优化
+*   Multi-source retrieval strategies and result fusion
+    多源检索策略和结果融合
+*   Adaptive context assembly with learning integration
+    具有学习集成的自适应上下文汇编
+*   Comprehensive evaluation of context generation effectiveness
+    上下文生成效果综合评估
 
 **Software 3.0 Integration**:
-- **Prompts**: Strategic templates for reasoning and knowledge integration
-- **Programming**: Sophisticated retrieval and assembly algorithms
-- **Protocols**: Self-improving context generation systems
+**软件 3.0 集成** ：
+
+*   **Prompts**: Strategic templates for reasoning and knowledge integration
+    **提示** ：推理和知识整合的战略模板
+*   **Programming**: Sophisticated retrieval and assembly algorithms
+    **编程** ：复杂的检索和汇编算法
+*   **Protocols**: Self-improving context generation systems
+    **协议** ：自我改进的上下文生成系统
 
 **Implementation Skills**:
-- Semantic retrieval using embeddings and vector databases
-- Dynamic context assembly with cognitive load optimization
-- Multi-source information fusion and deduplication
-- Effectiveness evaluation and continuous improvement systems
+**实施技巧** ：
+
+*   Semantic retrieval using embeddings and vector databases
+    使用嵌入和向量数据库进行语义检索
+*   Dynamic context assembly with cognitive load optimization
+    具有认知负载优化的动态上下文汇编
+*   Multi-source information fusion and deduplication
+    多源信息融合和重复数据删除
+*   Effectiveness evaluation and continuous improvement systems
+    有效性评估和持续改进系统
 
 **Research Grounding**: Direct implementation of context generation research (§4.1) with novel extensions into adaptive assembly, multi-source fusion, and self-improving context orchestration.
+**研究基础** ：直接实施上下文生成研究 （§4.1），并对自适应汇编、多源融合和自我改进的上下文编排进行新颖的扩展。
 
-**Next Module**: [01_prompt_engineering.md](01_prompt_engineering.md) - Deep dive into advanced prompting techniques, building on context generation foundations to master the art and science of LLM communication.
+**Next Module**: [01\_prompt\_engineering.md](01_prompt_engineering.md) - Deep dive into advanced prompting techniques, building on context generation foundations to master the art and science of LLM communication.
+**下一模块** ：[01\_prompt\_engineering.md](01_prompt_engineering.md) - 深入研究高级提示技术，以上下文生成为基础，掌握 LLM 通信的艺术和科学。
 
----
+* * *
 
-*This module establishes the foundation for intelligent context engineering, transforming the simple concept of "prompt" into a sophisticated system for dynamic knowledge orchestration and optimal information assembly.*
+*This module establishes the foundation for intelligent context engineering, transforming the simple concept of "prompt" into a sophisticated system for dynamic knowledge orchestration and optimal information assembly.
+该模块为智能上下文工程奠定了基础，将“提示”的简单概念转变为用于动态知识编排和最佳信息组装的复杂系统。*
