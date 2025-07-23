@@ -14,7 +14,7 @@
 
 ## Welcome to the Mathematical Heart of Context Engineering
 
-Now let's begins the most transformative part of your journey: **translating intuitive understanding into mathematical precision that enables systematic optimization and continuous improvement.**
+Now let's begin with the most transformative part of your journey: **translating intuitive understanding into mathematical precision that enables systematic optimization and continuous improvement.**
 
 ### The Transformation Ahead
 
