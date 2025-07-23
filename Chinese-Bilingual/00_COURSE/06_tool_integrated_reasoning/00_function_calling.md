@@ -1,46 +1,70 @@
 # Function Calling Fundamentals - Tool-Integrated Reasoning
+函数调用基础 - 工具集成推理
 
 ## Introduction: Programming LLMs with Tools
+引言：使用工具编程 LLMs
 
 > **Software 3.0 Paradigm**: "LLMs are a new kind of computer, and you program them *in English*" - Andrej Karpathy
+> 软件 3.0 范式："LLMs 是一种新型计算机，你用英语编程它们" - 安德烈·卡帕西
 
 Function calling represents a fundamental shift in how we architect intelligent systems. Rather than expecting LLMs to solve every problem through pure reasoning, we extend their capabilities by providing structured access to external tools, functions, and systems. This creates a new paradigm where LLMs become the orchestrating intelligence that can dynamically select, compose, and execute specialized tools to solve complex problems.
+函数调用代表了我们构建智能系统方式的根本性转变。我们不再期望 LLMs 通过纯粹的推理来解决所有问题，而是通过提供对外部工具、函数和系统的结构化访问来扩展它们的能力。这创造了一个新的范式，其中 LLMs 成为能够动态选择、组合和执行专业工具来解决复杂问题的协调智能。
 
 ## Mathematical Foundation of Function Calling
+函数调用的数学基础
 
 ### Context Engineering for Tool Integration
+工具集成的上下文工程
 
 Building on our foundational framework C = A(c₁, c₂, ..., cₙ), function calling introduces specialized context components:
+基于我们的基础框架 C = A(c₁, c₂, ..., cₙ)，函数调用引入了专门的上下文组件：
 
 ```
 C_tools = A(c_instr, c_tools, c_state, c_query, c_results)
 ```
 
 Where:
-- **c_tools**: Available function definitions and signatures
-- **c_state**: Current execution state and context
-- **c_results**: Results from previous function calls
-- **c_instr**: System instructions for tool usage
-- **c_query**: User's current request
+其中：
+
+*   **c\_tools**: Available function definitions and signatures
+    c\_tools：可用的函数定义和签名
+*   **c\_state**: Current execution state and context
+    c\_state: 当前执行状态和上下文
+*   **c\_results**: Results from previous function calls
+    c\_results: 之前函数调用的结果
+*   **c\_instr**: System instructions for tool usage
+    c\_instr: 工具使用的系统指令
+*   **c\_query**: User's current request
+    c\_query: 用户当前的请求
 
 ### Function Call Optimization
+函数调用优化
 
-The optimization problem becomes finding the optimal sequence of function calls F* that maximizes task completion while minimizing resource usage:
+The optimization problem becomes finding the optimal sequence of function calls F\* that maximizes task completion while minimizing resource usage:
+优化问题变成寻找最优函数调用序列 F\*，以在最小化资源使用的同时最大化任务完成度：
 
 ```
 F* = arg max_{F} Σ(Reward(f_i) × Efficiency(f_i)) - Cost(f_i)
 ```
 
 Subject to constraints:
-- Resource limits: Σ Cost(f_i) ≤ Budget
-- Safety constraints: Safe(f_i) = True ∀ f_i
-- Dependency resolution: Dependencies(f_i) ⊆ Completed_functions
+满足约束条件：
+
+*   Resource limits: Σ Cost(f\_i) ≤ Budget
+    资源限制：Σ Cost(f\_i) ≤ 预算
+*   Safety constraints: Safe(f\_i) = True ∀ f\_i
+    安全约束：Safe(f\_i) = True ∀ f\_i
+*   Dependency resolution: Dependencies(f\_i) ⊆ Completed\_functions
+    依赖解析：Dependencies(f\_i) ⊆ Completed\_functions
 
 ## Core Concepts
+核心概念
 
-### 1. Function Signatures and Schemas
+### 1\. Function Signatures and Schemas
+1\. 函数签名和模式
 
 Function calling requires precise interface definitions that LLMs can understand and use reliably:
+调用函数需要精确的接口定义，LLMs 能够理解并可靠地使用：
 
 ```python
 # Example: Mathematical calculation function
@@ -65,7 +89,8 @@ Function calling requires precise interface definitions that LLMs can understand
 }
 ```
 
-### 2. Function Call Flow
+### 2\. Function Call Flow
+2\. 函数调用流程
 
 ```ascii
 ┌─────────────────┐
@@ -93,27 +118,46 @@ Function calling requires precise interface definitions that LLMs can understand
                         └──────────────────┘
 ```
 
-### 3. Function Call Types
+### 3\. Function Call Types
+3\. 函数调用类型
 
-#### **Synchronous Calls**
-- Direct function execution with immediate results
-- Suitable for: calculations, data transformations, simple queries
+#### **Synchronous Calls
+同步调用**
 
-#### **Asynchronous Calls**
-- Non-blocking execution for long-running operations
-- Suitable for: web requests, file processing, complex computations
+*   Direct function execution with immediate results
+    直接执行功能并立即获得结果
+*   Suitable for: calculations, data transformations, simple queries
+    适用于：计算、数据转换、简单查询
 
-#### **Parallel Calls**
-- Multiple functions executed simultaneously
-- Suitable for: independent operations, data gathering from multiple sources
+#### **Asynchronous Calls
+异步调用**
 
-#### **Sequential Calls**
-- Chained function execution where output feeds input
-- Suitable for: multi-step workflows, complex reasoning chains
+*   Non-blocking execution for long-running operations
+    非阻塞执行用于长时间运行的操作
+*   Suitable for: web requests, file processing, complex computations
+    适用于：网络请求、文件处理、复杂计算
+
+#### **Parallel Calls
+并行调用**
+
+*   Multiple functions executed simultaneously
+    多个函数同时执行
+*   Suitable for: independent operations, data gathering from multiple sources
+    适用于：独立操作、从多个数据源收集数据
+
+#### **Sequential Calls
+顺序调用**
+
+*   Chained function execution where output feeds input
+    链式函数执行，输出作为输入
+*   Suitable for: multi-step workflows, complex reasoning chains
+    适用于：多步骤工作流，复杂推理链
 
 ## Function Definition Patterns
+函数定义模式
 
 ### Basic Function Pattern
+基本功能模式
 
 ```json
 {
@@ -135,6 +179,7 @@ Function calling requires precise interface definitions that LLMs can understand
 ```
 
 ### Complex Function Pattern
+复杂功能模式
 
 ```json
 {
@@ -183,10 +228,13 @@ Function calling requires precise interface definitions that LLMs can understand
 ```
 
 ## Implementation Strategies
+实现策略
 
-### 1. Function Registry Pattern
+### 1\. Function Registry Pattern
+1\. 函数注册模式
 
 A centralized registry that manages available functions:
+一个集中式注册表，管理可用功能：
 
 ```python
 class FunctionRegistry:
@@ -219,7 +267,8 @@ class FunctionRegistry:
         return func_info['function'](**kwargs)
 ```
 
-### 2. Parameter Validation Strategy
+### 2\. Parameter Validation Strategy
+2\. 参数验证策略
 
 ```python
 from jsonschema import validate, ValidationError
@@ -248,7 +297,8 @@ def safe_function_call(function_name, parameters, registry):
         return {"error": f"Function execution failed: {str(e)}"}
 ```
 
-### 3. Context-Aware Function Selection
+### 3\. Context-Aware Function Selection
+3\. 智能感知功能选择
 
 ```python
 def select_optimal_functions(query, available_functions, context):
@@ -277,8 +327,10 @@ def select_optimal_functions(query, available_functions, context):
 ```
 
 ## Advanced Function Calling Patterns
+高级功能调用模式
 
-### 1. Function Composition
+### 1\. Function Composition
+1\. 函数组合
 
 ```json
 {
@@ -304,7 +356,8 @@ def select_optimal_functions(query, available_functions, context):
 }
 ```
 
-### 2. Conditional Function Execution
+### 2\. Conditional Function Execution
+2\. 条件函数执行
 
 ```json
 {
@@ -332,7 +385,8 @@ def select_optimal_functions(query, available_functions, context):
 }
 ```
 
-### 3. Error Handling and Retry Logic
+### 3\. Error Handling and Retry Logic
+3\. 错误处理和重试逻辑
 
 ```python
 def robust_function_call(function_name, parameters, max_retries=3):
@@ -363,10 +417,12 @@ def robust_function_call(function_name, parameters, max_retries=3):
 ```
 
 ## Prompt Templates for Function Calling
+函数调用的提示模板
 
 ### Basic Function Calling Template
+基础功能调用模板
 
-```
+````
 FUNCTION_CALLING_TEMPLATE = """
 You have access to the following functions:
 
@@ -387,9 +443,10 @@ Current task: {user_query}
 
 Think step by step about what functions you need to use and in what order.
 """
-```
+````
 
 ### Multi-Step Reasoning Template
+多步推理模板
 
 ```
 MULTI_STEP_FUNCTION_TEMPLATE = """
@@ -412,6 +469,7 @@ Begin your reasoning:
 ```
 
 ### Error Recovery Template
+错误恢复模板
 
 ```
 ERROR_RECOVERY_TEMPLATE = """
@@ -433,8 +491,10 @@ Continue working toward the goal: {original_goal}
 ```
 
 ## Security and Safety Considerations
+安全和安全注意事项
 
-### 1. Function Access Control
+### 1\. Function Access Control
+1\. 函数访问控制
 
 ```python
 class SecureFunctionRegistry(FunctionRegistry):
@@ -460,7 +520,8 @@ class SecureFunctionRegistry(FunctionRegistry):
         return self._execute_with_limits(function_name, **kwargs)
 ```
 
-### 2. Input Sanitization
+### 2\. Input Sanitization
+2\. 输入净化
 
 ```python
 def sanitize_function_input(parameters):
@@ -482,7 +543,8 @@ def sanitize_function_input(parameters):
     return sanitized
 ```
 
-### 3. Resource Limits
+### 3\. Resource Limits
+3\. 资源限制
 
 ```python
 import signal
@@ -514,34 +576,55 @@ def execute_with_resource_limits(function, max_time=30, max_memory=None):
 ```
 
 ## Best Practices and Guidelines
+最佳实践与指南
 
-### 1. Function Design Principles
+### 1\. Function Design Principles
+1\. 函数设计原则
 
-- **Single Responsibility**: Each function should have one clear purpose
-- **Clear Interfaces**: Parameters and return values should be well-defined
-- **Error Handling**: Functions should handle errors gracefully
-- **Documentation**: Comprehensive descriptions for LLM understanding
-- **Idempotency**: Functions should be safe to retry when possible
+*   **Single Responsibility**: Each function should have one clear purpose
+    单一职责：每个函数应有一个明确的目的
+*   **Clear Interfaces**: Parameters and return values should be well-defined
+    清晰接口：参数和返回值应定义清晰
+*   **Error Handling**: Functions should handle errors gracefully
+    错误处理：函数应优雅地处理错误
+*   **Documentation**: Comprehensive descriptions for LLM understanding
+    文档：为 LLM 理解的全面描述
+*   **Idempotency**: Functions should be safe to retry when possible
+    幂等性：函数在可能的情况下应安全重试
 
-### 2. Function Calling Strategy
+### 2\. Function Calling Strategy
+2\. 函数调用策略
 
-- **Progressive Disclosure**: Start with simple functions, add complexity as needed
-- **Context Awareness**: Consider the conversation state when selecting functions
-- **Result Validation**: Verify function outputs before proceeding
-- **Error Recovery**: Have strategies for handling function failures
-- **Performance Monitoring**: Track function usage and performance
+*   **Progressive Disclosure**: Start with simple functions, add complexity as needed
+    渐进式披露：从简单的函数开始，按需增加复杂性
+*   **Context Awareness**: Consider the conversation state when selecting functions
+    上下文感知：在选择函数时考虑对话状态
+*   **Result Validation**: Verify function outputs before proceeding
+    结果验证：在进行下一步之前验证函数输出
+*   **Error Recovery**: Have strategies for handling function failures
+    错误恢复：制定处理函数失败的策略
+*   **Performance Monitoring**: Track function usage and performance
+    性能监控：跟踪函数使用情况和性能
 
-### 3. Integration Patterns
+### 3\. Integration Patterns
+3\. 集成模式
 
-- **Registry Pattern**: Centralized function management
-- **Factory Pattern**: Dynamic function creation based on context
-- **Chain of Responsibility**: Sequential function execution
-- **Observer Pattern**: Function call monitoring and logging
-- **Strategy Pattern**: Pluggable function execution strategies
+*   **Registry Pattern**: Centralized function management
+    注册模式：集中式函数管理
+*   **Factory Pattern**: Dynamic function creation based on context
+    工厂模式：基于上下文的动态函数创建
+*   **Chain of Responsibility**: Sequential function execution
+    责任链模式：顺序式函数执行
+*   **Observer Pattern**: Function call monitoring and logging
+    观察者模式：函数调用监控与日志记录
+*   **Strategy Pattern**: Pluggable function execution strategies
+    策略模式：可插拔的函数执行策略
 
 ## Evaluation and Testing
+评估与测试
 
 ### Function Call Quality Metrics
+函数调用质量指标
 
 ```python
 def evaluate_function_calling(test_cases):
@@ -571,35 +654,62 @@ def evaluate_function_calling(test_cases):
 ```
 
 ## Future Directions
+未来方向
 
-### 1. Adaptive Function Discovery
-- LLMs that can discover and learn new functions
-- Automatic function composition and optimization
-- Self-improving function calling strategies
+### 1\. Adaptive Function Discovery
+1\. 自适应函数发现
 
-### 2. Multi-Modal Function Integration
-- Functions that handle text, images, audio, and video
-- Cross-modal reasoning and function chaining
-- Unified interface for diverse tool types
+*   LLMs that can discover and learn new functions
+    能够发现和学习新功能的 LLMs
+*   Automatic function composition and optimization
+    自动函数组合与优化
+*   Self-improving function calling strategies
+    自我改进的函数调用策略
 
-### 3. Collaborative Function Execution
-- Multi-agent function calling coordination
-- Distributed function execution
-- Consensus-based function selection
+### 2\. Multi-Modal Function Integration
+2\. 多模态函数集成
+
+*   Functions that handle text, images, audio, and video
+    处理文本、图像、音频和视频的功能
+*   Cross-modal reasoning and function chaining
+    跨模态推理和功能链
+*   Unified interface for diverse tool types
+    多样化工具类型的统一接口
+
+### 3\. Collaborative Function Execution
+3\. 协作功能执行
+
+*   Multi-agent function calling coordination
+    多智能体函数调用协调
+*   Distributed function execution
+    分布式函数执行
+*   Consensus-based function selection
+    基于共识的函数选择
 
 ## Conclusion
+结论
 
 Function calling fundamentals establish the foundation for tool-integrated reasoning in the Software 3.0 paradigm. By providing LLMs with structured access to external capabilities, we transform them from isolated reasoning engines into orchestrating intelligences capable of solving complex, real-world problems.
+函数调用基础为软件 3.0 范式中的工具集成推理奠定了基础。通过为 LLMs 提供对外部能力的结构化访问，我们将它们从孤立的推理引擎转变为能够解决复杂现实问题的协调智能体。
 
 The key to successful function calling lies in:
-1. **Clear Interface Design**: Well-defined function signatures and schemas
-2. **Robust Execution**: Safe, reliable function execution with proper error handling
-3. **Intelligent Selection**: Context-aware function selection and composition
-4. **Security Awareness**: Proper access control and input validation
-5. **Continuous Improvement**: Monitoring, evaluation, and optimization
+成功调用函数的关键在于：
+
+1.  **Clear Interface Design**: Well-defined function signatures and schemas
+    清晰的界面设计：定义明确的函数签名和架构
+2.  **Robust Execution**: Safe, reliable function execution with proper error handling
+    稳健的执行：安全可靠的函数执行，并具备适当的错误处理
+3.  **Intelligent Selection**: Context-aware function selection and composition
+    智能选择：基于上下文的函数选择和组合
+4.  **Security Awareness**: Proper access control and input validation
+    安全意识：适当的访问控制和输入验证
+5.  **Continuous Improvement**: Monitoring, evaluation, and optimization
+    持续改进：监控、评估和优化
 
 As we progress through tool integration strategies, agent-environment interaction, and reasoning frameworks, these fundamentals provide the stable foundation upon which sophisticated tool-augmented intelligence can be built.
+随着我们推进工具集成策略、智能体-环境交互和推理框架，这些基础知识为构建复杂的工具增强智能提供了稳定的基础。
 
----
+* * *
 
-*This foundation enables LLMs to transcend their training boundaries and become truly capable partners in solving complex, dynamic problems through structured tool integration.*
+*This foundation enables LLMs to transcend their training boundaries and become truly capable partners in solving complex, dynamic problems through structured tool integration.
+这一基础使 LLMs 能够超越其训练边界，通过结构化的工具集成成为解决复杂、动态问题的真正合作伙伴。*
