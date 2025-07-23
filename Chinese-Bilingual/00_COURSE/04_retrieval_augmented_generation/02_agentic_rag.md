@@ -1,12 +1,17 @@
 # Agentic RAG: Agent-Driven Retrieval Systems
+代理式 RAG：代理驱动的检索系统
 
 ## Overview
+概述
 
 Agentic RAG represents the evolution from passive retrieval systems to autonomous agents capable of reasoning about information needs, planning retrieval strategies, and adapting their approach based on intermediate results. These systems embody Software 3.0 principles by integrating intelligent prompting (reasoning communication), autonomous programming (adaptive implementation), and strategic protocols (goal-oriented orchestration) into cohesive, self-directed information gathering agents.
+代理式 RAG 代表了从被动检索系统到能够推理信息需求、规划检索策略并根据中间结果调整方法的自主代理的演进。这些系统通过将智能提示（推理通信）、自主编程（自适应实现）和战略协议（目标导向的编排）集成到连贯的、自我导向的信息收集代理中，体现了软件 3.0 原则。
 
 ## The Agent Paradigm in RAG
+RAG 中的代理范式
 
 ### Traditional RAG vs. Agentic RAG
+传统 RAG 与代理式 RAG
 
 ```
 TRADITIONAL RAG WORKFLOW
@@ -32,6 +37,7 @@ Query → Agent Planning → Dynamic Retrieval Strategy
 ```
 
 ### Software 3.0 Agent Architecture
+软件 3.0 代理架构
 
 ```
 AGENTIC RAG SOFTWARE 3.0 STACK
@@ -57,10 +63,13 @@ Layer 1: PROMPT COMMUNICATION (Reasoning Dialogue)
 ```
 
 ## Progressive Complexity Layers
+渐进式复杂度层
 
 ### Layer 1: Basic Reasoning Agents (Foundation)
+第 1 层：基础推理代理（基础）
 
 #### Reasoning Prompt Templates
+推理提示模板
 
 ```
 AGENT_REASONING_TEMPLATE = """
@@ -102,6 +111,7 @@ How I'll know if I need to adapt:
 ```
 
 #### Basic Agent Programming
+基础代理编程
 
 ```python
 class BasicRAGAgent:
@@ -179,6 +189,7 @@ class BasicRAGAgent:
 ```
 
 #### Simple Agent Protocol
+简单代理协议
 
 ```
 /agent.rag.basic{
@@ -231,8 +242,10 @@ class BasicRAGAgent:
 ```
 
 ### Layer 2: Adaptive Strategic Agents (Intermediate)
+第二层：自适应战略代理（中级）
 
 #### Strategic Reasoning Templates
+战略推理模板
 
 ```
 STRATEGIC_AGENT_TEMPLATE = """
@@ -294,6 +307,7 @@ Learning integration plan:
 ```
 
 #### Strategic Agent Programming
+策略代理编程
 
 ```python
 class StrategicRAGAgent(BasicRAGAgent):
@@ -387,6 +401,7 @@ class StrategicRAGAgent(BasicRAGAgent):
 ```
 
 #### Strategic Protocol Orchestration
+策略协议编排
 
 ```
 /agent.rag.strategic{
@@ -461,8 +476,10 @@ class StrategicRAGAgent(BasicRAGAgent):
 ```
 
 ### Layer 3: Meta-Cognitive Research Agents (Advanced)
+第三层：元认知研究代理（高级）
 
 #### Meta-Cognitive Reasoning Templates
+元认知推理模板
 
 ```
 META_COGNITIVE_AGENT_TEMPLATE = """
@@ -540,6 +557,7 @@ Next-level reasoning targets:
 ```
 
 #### Meta-Cognitive Agent Programming
+元认知代理编程
 
 ```python
 class MetaCognitiveRAGAgent(StrategicRAGAgent):
@@ -656,6 +674,7 @@ class MetaCognitiveRAGAgent(StrategicRAGAgent):
 ```
 
 #### Meta-Cognitive Protocol Orchestration
+元认知协议编排
 
 ```
 /agent.rag.meta.cognitive{
@@ -733,8 +752,10 @@ class MetaCognitiveRAGAgent(StrategicRAGAgent):
 ```
 
 ## Agent Coordination Architectures
+代理协调架构
 
 ### Multi-Agent RAG Systems
+多代理 RAG 系统
 
 ```
 MULTI-AGENT RAG COORDINATION
@@ -779,6 +800,7 @@ MULTI-AGENT RAG COORDINATION
 ```
 
 ### Agent Learning Networks
+智能体学习网络
 
 ```python
 class AgentLearningNetwork:
@@ -849,8 +871,10 @@ class AgentLearningNetwork:
 ```
 
 ## Performance Optimization
+性能优化
 
 ### Agent Efficiency Patterns
+智能体效率模式
 
 ```
 AGENT PERFORMANCE OPTIMIZATION
@@ -900,8 +924,10 @@ Dimension 3: Quality Optimization
 ```
 
 ## Integration Examples
+集成示例
 
 ### Complete Agentic RAG Implementation
+完整智能体 RAG 实现
 
 ```python
 class CompleteAgenticRAG:
@@ -956,16 +982,26 @@ class CompleteAgenticRAG:
 ```
 
 ## Future Directions
+未来方向
 
 ### Emerging Agent Capabilities
+新兴智能体能力
 
-1. **Collaborative Intelligence**: Agents that can form dynamic teams and coordinate complex multi-agent research projects
-2. **Cross-Modal Reasoning**: Agents capable of reasoning across text, images, audio, and structured data simultaneously
-3. **Temporal Reasoning**: Agents that understand and reason about time-dependent information and causality
-4. **Ethical Reasoning**: Agents with built-in ethical frameworks for responsible information gathering and synthesis
-5. **Creative Synthesis**: Agents capable of novel insight generation and creative problem-solving approaches
+1.  **Collaborative Intelligence**: Agents that can form dynamic teams and coordinate complex multi-agent research projects
+    协同智能：能够形成动态团队并协调复杂多智能体研究项目的智能体
+2.  **Cross-Modal Reasoning**: Agents capable of reasoning across text, images, audio, and structured data simultaneously
+    跨模态推理：能够在文本、图像、音频和结构化数据之间同时进行推理的智能体
+3.  **Temporal Reasoning**: Agents that understand and reason about time-dependent information and causality
+    时序推理：能够理解和推理时间依赖信息及因果关系的智能体
+4.  **Ethical Reasoning**: Agents with built-in ethical frameworks for responsible information gathering and synthesis
+    伦理推理：具有内置伦理框架的智能体，用于负责任的信息收集和综合
+5.  **Creative Synthesis**: Agents capable of novel insight generation and creative problem-solving approaches
+    创造性综合：能够产生新颖见解和创造性解决问题的方法的智能体
 
 ### Research Frontiers
+研究前沿
 
-- **Agent Consciousness Models**: Exploring degrees of self-awareness and meta-cognitive sophistication
-- **Emergent Agent Behaviors**: Understanding how complex behaviors emerge from simple agents
+*   **Agent Consciousness Models**: Exploring degrees of self-awareness and meta-cognitive sophistication
+    智能体意识模型：探索自我意识和元认知复杂程度
+*   **Emergent Agent Behaviors**: Understanding how complex behaviors emerge from simple agents
+    涌现代理行为：理解复杂行为如何从简单代理中产生
