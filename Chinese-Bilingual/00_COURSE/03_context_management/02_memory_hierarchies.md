@@ -1,10 +1,14 @@
 # Memory Hierarchies: Storage Architectures for Context Management
+内存层次结构：用于上下文管理的存储体系结构
 
 ## Overview: The Multi-Level Information Ecosystem
+概述：多层次信息生态系统
 
 Memory hierarchies represent one of the most powerful concepts in context management - organizing information across multiple levels of storage with different characteristics for access speed, capacity, and persistence. In the Software 3.0 paradigm, memory hierarchies become dynamic, intelligent systems that adapt to usage patterns and optimize for both efficiency and effectiveness.
+内存层次结构代表了上下文管理中最强大的概念之一 - 跨多个级别的存储组织信息，这些存储具有不同的访问速度、容量和持久性特征。在软件 3.0 范式中，内存层次结构成为动态的智能系统，可以适应使用模式并优化效率和效果。
 
 ## Understanding Memory Hierarchies Visually
+直观地理解内存层次结构
 
 ```
     ┌─ IMMEDIATE CONTEXT ────────────────┐ ←─ Fastest Access
@@ -42,10 +46,13 @@ Memory hierarchies represent one of the most powerful concepts in context manage
 ```
 
 ## The Three Pillars Applied to Memory Hierarchies
+应用于内存层次结构的三大支柱
 
 ### Pillar 1: PROMPT TEMPLATES for Memory Management
+支柱 1：内存管理的提示模板
 
 Memory hierarchy operations require sophisticated prompt templates that can handle different storage levels and access patterns.
+内存层次结构作需要复杂的提示模板，这些模板可以处理不同的存储级别和访问模式。
 
 ```python
 MEMORY_HIERARCHY_TEMPLATES = {
@@ -167,8 +174,10 @@ MEMORY_HIERARCHY_TEMPLATES = {
 ```
 
 ### Pillar 2: PROGRAMMING Layer for Memory Architecture
+支柱 2：内存架构的编程层
 
 The programming layer implements the computational infrastructure for managing hierarchical memory systems.
+编程层实现用于管理分层内存系统的计算基础设施。
 
 ```python
 from abc import ABC, abstractmethod
@@ -665,6 +674,7 @@ class ArchivalMemoryStore(MemoryStore):
 ```
 
 ### Pillar 3: PROTOCOLS for Memory Hierarchy Management
+支柱 3：内存层次结构管理协议
 
 ```
 /memory.hierarchy.orchestration{
@@ -837,6 +847,7 @@ class ArchivalMemoryStore(MemoryStore):
 ```
 
 ## Practical Integration Example: Complete Memory Hierarchy System
+实际集成示例：完整的内存层次结构系统
 
 ```python
 class IntegratedMemorySystem:
@@ -909,47 +920,88 @@ class IntegratedMemorySystem:
 ```
 
 ## Key Principles for Memory Hierarchy Design
+内存层次结构设计的关键原则
 
-### 1. Locality Optimization
-- **Temporal Locality**: Recently accessed information should be in faster levels
-- **Spatial Locality**: Related information should be stored together
-- **Semantic Locality**: Conceptually related content should be co-located
+### 1\. Locality Optimization
+1\. 局部性优化
 
-### 2. Adaptive Promotion/Demotion
-- **Usage-Based**: Promote frequently accessed information
-- **Importance-Based**: Keep critical information in fast access levels
-- **Context-Aware**: Consider current task context in placement decisions
+*   **Temporal Locality**: Recently accessed information should be in faster levels
+    **时间局部性** ：最近访问的信息应该处于更快的级别
+*   **Spatial Locality**: Related information should be stored together
+    **空间局部性** ：相关信息应一起存储
+*   **Semantic Locality**: Conceptually related content should be co-located
+    **语义局部性** ：概念上相关的内容应位于同一位置
 
-### 3. Intelligent Caching
-- **Predictive**: Anticipate future access needs
-- **Multi-Level**: Implement caching at multiple hierarchy levels
-- **Adaptive**: Adjust caching strategies based on performance
+### 2\. Adaptive Promotion/Demotion
+2\. 自适应晋升/降级
 
-### 4. Cross-Level Integration
-- **Unified Views**: Present coherent information across levels
-- **Efficient Searches**: Search across levels intelligently
-- **Consistent Updates**: Maintain consistency across hierarchy
+*   **Usage-Based**: Promote frequently accessed information
+    基于**使用情况** ：推广经常访问的信息
+*   **Importance-Based**: Keep critical information in fast access levels
+    基于**重要性** ：将关键信息保持在快速访问级别
+*   **Context-Aware**: Consider current task context in placement decisions
+    **上下文感知** ：在安置决策中考虑当前任务上下文
+
+### 3\. Intelligent Caching
+3\. 智能缓存
+
+*   **Predictive**: Anticipate future access needs
+    **预测性** ：预测未来的访问需求
+*   **Multi-Level**: Implement caching at multiple hierarchy levels
+    **多级** ：在多个层次结构级别实现缓存
+*   **Adaptive**: Adjust caching strategies based on performance
+    **自适应** ：根据性能调整缓存策略
+
+### 4\. Cross-Level Integration
+4\. 跨层级集成
+
+*   **Unified Views**: Present coherent information across levels
+    **统一视图** ：跨级别呈现连贯的信息
+*   **Efficient Searches**: Search across levels intelligently
+    **高效搜索** ：智能跨级别搜索
+*   **Consistent Updates**: Maintain consistency across hierarchy
+    **一致的更新** ：保持跨层次结构的一致性
 
 ## Best Practices for Implementation
+实施的最佳实践
 
 ### For Beginners
-1. **Start Simple**: Implement basic two-level hierarchy (immediate + working)
-2. **Focus on Access Patterns**: Monitor how information is being used
-3. **Use Templates**: Start with provided prompt templates for common operations
-4. **Measure Performance**: Track basic metrics like hit rates and access times
+对于初学者
 
-### For Intermediate Users  
-1. **Implement Multi-Level Systems**: Add short-term and long-term storage
-2. **Add Intelligence**: Implement adaptive promotion/demotion algorithms
-3. **Optimize Caching**: Use sophisticated caching strategies
-4. **Monitor and Adapt**: Build feedback loops for continuous optimization
+1.  **Start Simple**: Implement basic two-level hierarchy (immediate + working)
+    从**简单开始** ：实现基本的两级层次结构（即时 + 工作）
+2.  **Focus on Access Patterns**: Monitor how information is being used
+    **关注访问模式** ：监控信息的使用方式
+3.  **Use Templates**: Start with provided prompt templates for common operations
+    **使用模板** ：从提供的提示模板开始进行常见作
+4.  **Measure Performance**: Track basic metrics like hit rates and access times
+    **衡量性能** ：跟踪命中率和访问时间等基本指标
+
+### For Intermediate Users
+对于中级用户
+
+1.  **Implement Multi-Level Systems**: Add short-term and long-term storage
+    **实施多级系统** ：增加短期和长期存储
+2.  **Add Intelligence**: Implement adaptive promotion/demotion algorithms
+    **添加智能** ：实施自适应提升/降级算法
+3.  **Optimize Caching**: Use sophisticated caching strategies
+    **优化缓存** ：使用复杂的缓存策略
+4.  **Monitor and Adapt**: Build feedback loops for continuous optimization
+    **监控和适应** ：构建反馈循环以实现持续优化
 
 ### For Advanced Practitioners
-1. **Design Predictive Systems**: Anticipate future information needs
-2. **Implement Cross-Level Protocols**: Build sophisticated orchestration systems
-3. **Optimize for Specific Domains**: Customize hierarchy for specific use cases
-4. **Build Self-Optimizing Systems**: Create systems that improve themselves over time
+对于高级从业者
 
----
+1.  **Design Predictive Systems**: Anticipate future information needs
+    **设计预测系统** ：预测未来的信息需求
+2.  **Implement Cross-Level Protocols**: Build sophisticated orchestration systems
+    **实施跨级协议** ：构建复杂的编排系统
+3.  **Optimize for Specific Domains**: Customize hierarchy for specific use cases
+    **针对特定域进行优化** ：针对特定用例自定义层次结构
+4.  **Build Self-Optimizing Systems**: Create systems that improve themselves over time
+    **构建自我优化系统** ：创建随着时间的推移自我改进的系统
 
-*Memory hierarchies provide the foundation for efficient, scalable context management. The integration of structured prompting, computational programming, and systematic protocols enables the creation of sophisticated memory systems that adapt to usage patterns and optimize for both performance and effectiveness.*
+* * *
+
+*Memory hierarchies provide the foundation for efficient, scalable context management. The integration of structured prompting, computational programming, and systematic protocols enables the creation of sophisticated memory systems that adapt to usage patterns and optimize for both performance and effectiveness.
+内存层次结构为高效、可扩展的上下文管理奠定了基础。结构化提示、计算编程和系统协议的集成可以创建复杂的内存系统，以适应使用模式并优化性能和有效性。*
