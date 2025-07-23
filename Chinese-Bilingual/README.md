@@ -38,8 +38,7 @@ Operationalizing the Latest Research on Context With First Principles & Visuals 
 ### **[IBM Zurich](https://www.arxiv.org/pdf/2506.12115) | [Quantum Semantics](https://arxiv.org/pdf/2506.10077) | [Emergent Symbolics ICML Princeton](https://openreview.net/forum?id=y1SnRPDWx4) | [MEM1 Singapore-MIT](https://arxiv.org/pdf/2506.15841) | [LLM Attractors Shanghai AI](https://arxiv.org/pdf/2502.15208?) | [MemOS Shanghai](https://github.com/MemTensor/MemOS) | [Latent Reasoning](https://arxiv.org/pdf/2507.06203) | [Dynamic Recursive Depths](https://arxiv.org/pdf/2507.10524) | [A Systematic Analysis of Over 1400 Research Papers on Context Engineering](https://arxiv.org/pdf/2507.13334)
 [IBM 苏黎世](https://www.arxiv.org/pdf/2506.12115) | [量子语义](https://arxiv.org/pdf/2506.10077) |[Emergent Symbolics ICML 普林斯顿](https://openreview.net/forum?id=y1SnRPDWx4) |[MEM1 新加坡-麻省理工学院](https://arxiv.org/pdf/2506.15841) | [法学硕士吸引子上海人工智能](https://arxiv.org/pdf/2502.15208?) |[MemOS 上海](https://github.com/MemTensor/MemOS) | [潜在推理](https://arxiv.org/pdf/2507.06203) | [动态递归深度](https://arxiv.org/pdf/2507.10524) | [对 1400 多篇环境工程研究论文的系统分析](https://arxiv.org/pdf/2507.13334)**
 
-## [Chat with NotebookLM + Podcast Deep Dive
-与 NotebookLM 聊天 + 播客深入探讨](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)
+## [Chat with NotebookLM + Podcast Deep Dive 与 NotebookLM 聊天 + 播客深入探讨](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)
 
 ## [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/davidkimai/Context-Engineering)
 
