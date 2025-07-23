@@ -892,4 +892,4 @@ As AI systems become more sophisticated, reconstructive memory will likely becom
 
 Explore how reconstructive memory integrates with neural field architectures in our neural field attractor protocols, where fragments become field patterns and reconstruction emerges from field dynamics.
 
-[Continue to Neural Field Memory Attractors →](https://github.com/davidkimai/Context-Engineering/blob/main/60_protocols/shells/recursive.memory.attractor.shell.md)
+[Continue to Neural Field Memory Attractors →](https://github.com/davidkimai/Context-Engineering/blob/main/60_protocols/shells/memory.reconstruction.attractor.shell.md)
