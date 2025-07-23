@@ -1,21 +1,32 @@
 # Bayesian Inference: Probabilistic Context Adaptation
+贝叶斯推理：概率上下文适应
+
 ## From Fixed Rules to Learning Under Uncertainty
+从固定规则到不确定性下的学习
 
 > **Module 00.4** | *Context Engineering Course: From Foundations to Frontier Systems*
+> **模块 00.4** | *上下文工程课程：从基础到前沿系统*
 > 
-> *"The essence of Bayesian inference is learning from experience" — Thomas Bayes*
+> *"The essence of Bayesian inference is learning from experience" — Thomas Bayes
+> “贝叶斯推理的本质是从经验中学习”——托马斯·贝叶斯*
 
----
+* * *
 
 ## From Certainty to Intelligent Uncertainty
+从确定性到智能不确定性
 
 You've learned to formalize context, optimize assembly, and measure information value. Now comes the most sophisticated challenge: **How do we make optimal context decisions when we're uncertain about user intent, information relevance, and optimal strategies?**
+您已经学会了正式化上下文、优化装配和衡量信息价值。现在出现了最复杂的挑战： **当我们不确定用户意图、信息相关性和最佳策略时，我们如何做出最佳上下文决策？**
 
 ### The Universal Uncertainty Challenge
+普遍的不确定性挑战
 
 Consider these familiar uncertainty scenarios:
+考虑以下熟悉的不确定性场景：
 
 **Medical Diagnosis**:
+**医学诊断** ：
+
 ```
 Initial Symptom: "Headache" (many possible causes)
 Additional Information: "Recent travel" (updates probability)
@@ -24,6 +35,8 @@ Final Diagnosis: High-confidence specific condition
 ```
 
 **Navigation Under Uncertainty**:
+**不确定性下的导航** ：
+
 ```
 Starting Knowledge: "Traffic is usually light at this time"
 Real-time Update: "Accident reported on main route"
@@ -32,6 +45,8 @@ Continuous Learning: "Update traffic patterns based on actual travel time"
 ```
 
 **Context Engineering Under Uncertainty**:
+**不确定性下的上下文工程** ：
+
 ```
 Initial Assembly: "Best guess context based on query"
 User Feedback: "Response indicates preference for more technical detail"
@@ -40,12 +55,15 @@ Continuous Learning: "Update context strategy for similar future queries"
 ```
 
 **The Pattern**: In each case, we start with incomplete information, gather evidence, update our beliefs, and make increasingly better decisions while learning from outcomes.
+**模式** ：在每种情况下，我们都会从不完整的信息开始，收集证据，更新我们的信念，并在从结果中学习的同时做出越来越好的决策。
 
----
+* * *
 
 ## Mathematical Foundations of Bayesian Inference
+贝叶斯推理的数学基础
 
 ### Bayes' Theorem: The Foundation
+贝叶斯定理：基础
 
 ```
 P(Hypothesis|Evidence) = P(Evidence|Hypothesis) × P(Hypothesis) / P(Evidence)
@@ -62,6 +80,7 @@ Where:
 ```
 
 ### Visual Understanding of Bayesian Updating
+贝叶斯更新的可视化理解
 
 ```
     Probability
@@ -80,8 +99,11 @@ Evidence shifts our confidence toward strategies that better explain observation
 ```
 
 ### Context-Specific Bayesian Framework
+特定于上下文的贝叶斯框架
 
 #### Context Strategy Posterior
+上下文策略后验
+
 ```
 P(Strategy_i|User_Response) ∝ P(User_Response|Strategy_i) × P(Strategy_i)
 
@@ -92,6 +114,8 @@ Where:
 ```
 
 #### Component Relevance Posterior
+组件相关性后验
+
 ```
 P(Component_Relevant|Query, Context) ∝ 
     P(Query, Context|Component_Relevant) × P(Component_Relevant)
@@ -100,14 +124,18 @@ This helps decide which components to include under uncertainty
 ```
 
 **Ground-up Explanation**: Bayesian inference provides a mathematical framework for learning from experience. Instead of fixed rules, we maintain probability distributions over what works best, and update these beliefs as we gather evidence from user interactions and feedback.
+**从头开始的解释** ：贝叶斯推理提供了一个从经验中学习的数学框架。我们没有固定规则，而是维护最有效的概率分布，并在我们从用户交互和反馈中收集证据时更新这些信念。
 
----
+* * *
 
 ## Software 3.0 Paradigm 1: Prompts (Probabilistic Reasoning Templates)
+软件 3.0 范式 1：提示（概率推理模板）
 
 Prompts provide systematic frameworks for reasoning about uncertainty and adapting context strategies based on probabilistic evidence.
+提示为推理不确定性和根据概率证据调整上下文策略提供了系统框架。
 
 ### Bayesian Context Adaptation Template
+贝叶斯上下文适应模板
 
 ```markdown
 # Bayesian Context Strategy Adaptation Framework
@@ -122,13 +150,22 @@ Prompts provide systematic frameworks for reasoning about uncertainty and adapti
 **Definition**: Initial confidence in different context assembly approaches
 **Framework**:
 ```
-P(Strategy_i) = Base_Confidence(Strategy_i) × Success_History_Weight(Strategy_i)
+
+P(Strategy\_i) = Base\_Confidence(Strategy\_i) × Success\_History\_Weight(Strategy\_i)
+P（Strategy\_i） = Base\_Confidence（Strategy\_i） × Success\_History\_Weight（Strategy\_i）
 
 Available Strategies:
-- Detailed_Technical (P = 0.3): High detail, technical accuracy focus
-- Concise_Practical (P = 0.4): Brief, actionable information focus  
-- Comprehensive_Balanced (P = 0.2): Balanced depth and breadth
-- User_Preference_Adapted (P = 0.1): Customized based on user history
+可用策略：
+
+*   Detailed\_Technical (P = 0.3): High detail, technical accuracy focus
+    Detailed\_Technical （P = 0.3）：细节高，注重技术精度
+*   Concise\_Practical (P = 0.4): Brief, actionable information focus
+    Concise\_Practical （P = 0.4）：简短、可作的信息重点
+*   Comprehensive\_Balanced (P = 0.2): Balanced depth and breadth
+    Comprehensive\_Balanced （P = 0.2）：深度和广度平衡
+*   User\_Preference\_Adapted (P = 0.1): Customized based on user history
+    User\_Preference\_Adapted （P = 0.1）：根据用户历史记录定制
+
 ```
 
 **Prior Establishment Process**:
@@ -141,13 +178,20 @@ Available Strategies:
 **Definition**: Initial beliefs about information component value
 **Framework**:
 ```
-P(Component_Relevant) = 
-    Domain_Relevance_Base × Semantic_Similarity × Source_Credibility
+
+P(Component\_Relevant) = Domain\_Relevance\_Base × Semantic\_Similarity × Source\_Credibility
+P（Component\_Relevant） = Domain\_Relevance\_Base × Semantic\_Similarity × Source\_Credibility
 
 Prior Categories:
-- High Relevance (P ≥ 0.8): Direct query matches, authoritative sources
-- Medium Relevance (0.4 ≤ P < 0.8): Related concepts, good sources
-- Low Relevance (P < 0.4): Tangential information, uncertain sources
+以前的类别：
+
+*   High Relevance (P ≥ 0.8): Direct query matches, authoritative sources
+    高相关性（P ≥ 0.8）：直接查询匹配，权威来源
+*   Medium Relevance (0.4 ≤ P < 0.8): Related concepts, good sources
+    中等相关性（0.4 ≤ P < 0.8）：相关概念，良好的来源
+*   Low Relevance (P < 0.4): Tangential information, uncertain sources
+    低相关性 （P < 0.4）：切线信息，来源不确定
+
 ```
 
 ## Evidence Collection Framework
@@ -158,30 +202,46 @@ Prior Categories:
 
 #### Explicit Feedback Likelihood
 ```
-P(Positive_Feedback|Strategy_i) = Strategy_Quality_Score(i) × User_Preference_Alignment(i)
+
+P(Positive\_Feedback|Strategy\_i) = Strategy\_Quality\_Score(i) × User\_Preference\_Alignment(i)
+P（Positive\_Feedback|Strategy\_i） = Strategy\_Quality\_Score（i） × User\_Preference\_Alignment（i）
 
 Feedback Types:
-- Direct Rating: "This response was helpful/unhelpful"
-- Preference Indication: "I prefer more/less detail"
-- Completion Success: "This solved my problem/didn't help"
+反馈类型：
+
+*   Direct Rating: "This response was helpful/unhelpful"
+    直接评分：“此回复有帮助/无益”
+*   Preference Indication: "I prefer more/less detail"
+    偏好指示：“我更喜欢更多/更少的细节”
+*   Completion Success: "This solved my problem/didn't help"
+    完成成功：“这解决了我的问题/没有帮助”
+
 ```
 
 #### Implicit Feedback Likelihood  
 ```
-P(Engagement_Pattern|Strategy_i) = 
-    α × Time_Spent_Reading +
-    β × Follow_up_Question_Quality +
-    γ × Task_Completion_Success
+
+P(Engagement\_Pattern|Strategy\_i) = α × Time\_Spent\_Reading + β × Follow\_up\_Question\_Quality + γ × Task\_Completion\_Success
+P（Engagement\_Pattern|Strategy\_i） = α × Time\_Spent\_Reading + β × Follow\_up\_Question\_Quality + γ × Task\_Completion\_Success
 
 Where α + β + γ = 1
+其中 α + β + γ = 1
+
 ```
 
 #### Behavioral Evidence Likelihood
 ```
-P(User_Behavior|Strategy_i) includes:
-- Reading Time Distribution: How long user spent on different sections
-- Interaction Patterns: Which parts generated follow-up questions
-- Application Success: Whether user successfully applied information
+
+P(User\_Behavior|Strategy\_i) includes:
+P（User\_Behavior|Strategy\_i） 包括：
+
+*   Reading Time Distribution: How long user spent on different sections
+    阅读时间分布：用户在不同版块上花费的时间
+*   Interaction Patterns: Which parts generated follow-up questions
+    交互模式：哪些部分产生了后续问题
+*   Application Success: Whether user successfully applied information
+    应用成功：用户是否成功应用信息
+
 ```
 
 ## Bayesian Update Process
@@ -191,25 +251,39 @@ P(User_Behavior|Strategy_i) includes:
 
 #### Single Evidence Update
 ```
-For each new piece of evidence E:
 
-P(Strategy_i|E) = P(E|Strategy_i) × P(Strategy_i) / Σⱼ P(E|Strategy_j) × P(Strategy_j)
+For each new piece of evidence E:
+对于每条新证据 E：
+
+P(Strategy\_i|E) = P(E|Strategy\_i) × P(Strategy\_i) / Σⱼ P(E|Strategy\_j) × P(Strategy\_j)
+P（Strategy\_i|E） = P（E|Strategy\_i） × P（Strategy\_i） / Σj P（E|Strategy\_j） × P（Strategy\_j）
 
 Update Steps:
-1. Calculate likelihood P(E|Strategy_i) for each strategy
-2. Apply Bayes' rule to get posterior probabilities
-3. Normalize to ensure probabilities sum to 1
-4. Update strategy confidence for next interaction
+更新步骤：
+
+1.  Calculate likelihood P(E|Strategy\_i) for each strategy
+    计算似然 P（E|Strategy\_i） 对于每个策略
+2.  Apply Bayes' rule to get posterior probabilities
+    应用贝叶斯规则获得后验概率
+3.  Normalize to ensure probabilities sum to 1
+    归一化以确保概率总和为 1
+4.  Update strategy confidence for next interaction
+    更新策略置信度以进行下一次交互
+
 ```
 
 #### Sequential Evidence Integration
 ```
-For sequence of evidence E₁, E₂, ..., Eₙ:
 
-P(Strategy_i|E₁, E₂, ..., Eₙ) = 
-    P(Eₙ|Strategy_i) × P(Strategy_i|E₁, ..., Eₙ₋₁) / P(Eₙ)
+For sequence of evidence E₁, E₂, ..., Eₙ:
+对于证据序列 E₁、E₂、...、En：
+
+P(Strategy\_i|E₁, E₂, ..., Eₙ) = P(Eₙ|Strategy\_i) × P(Strategy\_i|E₁, ..., Eₙ₋₁) / P(Eₙ)
+P（Strategy\_i|E₁， E₂， ...， En） = P（En|Strategy\_i） × P（Strategy\_i|E₁， ...， En₋₁） / P（En）
 
 This allows continuous learning from multiple interactions
+这允许从多个交互中持续学习
+
 ```
 
 ### 5. Decision Making Under Uncertainty
@@ -217,23 +291,30 @@ This allows continuous learning from multiple interactions
 
 #### Expected Utility Calculation
 ```
-EU(Strategy_i) = Σⱼ P(Outcome_j|Strategy_i) × Utility(Outcome_j)
+
+EU(Strategy\_i) = Σⱼ P(Outcome\_j|Strategy\_i) × Utility(Outcome\_j)
+EU（Strategy\_i） = Σj P（Outcome\_j|Strategy\_i） ×实用程序（Outcome\_j）
 
 Where outcomes include:
-- User Satisfaction Score
-- Task Completion Success  
-- Learning Efficiency
-- Resource Utilization
+其中结果包括：
+
+*   User Satisfaction Score
+    用户满意度得分
+*   Task Completion Success
+    任务完成成功
+*   Learning Efficiency
+    学习效率
+*   Resource Utilization
+    资源利用率
+
 ```
 
 #### Strategy Selection Rules
 ```
-IF max(P(Strategy_i)) > Confidence_Threshold:
-    SELECT strategy with highest posterior probability
-ELIF uncertainty_is_high():
-    SELECT strategy that maximizes information gain
-ELSE:
-    SELECT strategy with highest expected utility
+
+IF max(P(Strategy\_i)) > Confidence\_Threshold: SELECT strategy with highest posterior probability ELIF uncertainty\_is\_high(): SELECT strategy that maximizes information gain ELSE: SELECT strategy with highest expected utility
+IF max（P（Strategy\_i）） > Confidence\_Threshold：具有最高后验概率的 SELECT 策略 ELIF uncertainty\_is\_high（）：最大化信息增益的 SELECT 策略 ELSE：具有最高预期效用的 SELECT 策略
+
 ```
 
 ## Uncertainty Quantification
@@ -243,19 +324,26 @@ ELSE:
 
 #### Entropy-Based Uncertainty
 ```
-Uncertainty(Strategies) = -Σᵢ P(Strategy_i) × log₂(P(Strategy_i))
 
-High Entropy (≥ 2.0): Very uncertain, need more evidence
-Medium Entropy (1.0-2.0): Some uncertainty, proceed with caution  
+Uncertainty(Strategies) = -Σᵢ P(Strategy\_i) × log₂(P(Strategy\_i))
+不确定性（策略） = -σi P（Strategy\_i） × log₂（P（Strategy\_i））
+
+High Entropy (≥ 2.0): Very uncertain, need more evidence Medium Entropy (1.0-2.0): Some uncertainty, proceed with caution
+高熵 （≥ 2.0）：非常不确定，需要更多证据中熵 （1.0-2.0）：有些不确定性，谨慎行事
 Low Entropy (≤ 1.0): Confident in strategy choice
+低熵（≤ 1.0）：对策略选择充满信心
+
 ```
 
 #### Credible Intervals
 ```
-For continuous parameters (e.g., component weights):
-95% Credible Interval = [μ - 1.96σ, μ + 1.96σ]
+
+For continuous parameters (e.g., component weights): 95% Credible Interval = \[μ - 1.96σ, μ + 1.96σ\]
+对于连续参数（例如，成分权重）：95% 可信区间 = \[μ - 1.96σ， μ + 1.96σ\]
 
 Wide intervals indicate high uncertainty, narrow intervals indicate confidence
+宽区间表示高不确定性，窄区间表示置信度
+
 ```
 
 ## Adaptive Learning Integration
@@ -265,25 +353,38 @@ Wide intervals indicate high uncertainty, narrow intervals indicate confidence
 
 #### Learning Rate Adaptation
 ```
-Learning_Rate(t) = Base_Rate × Decay_Factor(t) × Uncertainty_Boost(t)
+
+Learning\_Rate(t) = Base\_Rate × Decay\_Factor(t) × Uncertainty\_Boost(t)
+Learning\_Rate（t） = Base\_Rate × Decay\_Factor（t） × Uncertainty\_Boost（t）
 
 Where:
-- Decay_Factor reduces learning rate as more evidence accumulates
-- Uncertainty_Boost increases learning rate when predictions are poor
+哪里：
+
+*   Decay\_Factor reduces learning rate as more evidence accumulates
+    随着更多证据的积累，Decay\_Factor 降低学习率
+*   Uncertainty\_Boost increases learning rate when predictions are poor
+    Uncertainty\_Boost 在预测不佳时提高学习率
+
 ```
 
 #### Model Selection Updates
 ```
+
 Periodically evaluate:
-- Are our likelihood models accurate?
-- Do we need more complex strategy representations?
-- Should we adjust evidence weighting schemes?
-```
-```
+定期评估：
+
+*   Are our likelihood models accurate?
+    我们的似然模型准确吗？
+*   Do we need more complex strategy representations?
+    我们是否需要更复杂的策略表示？
+*   Should we adjust evidence weighting schemes?
+    我们是否应该调整证据加权方案？
 
 **Ground-up Explanation**: This template provides a systematic approach to reasoning under uncertainty, like having a scientific method for context engineering that continuously updates its hypotheses based on new evidence.
+**从头开始的解释** ：该模板提供了一种在不确定性下进行推理的系统方法，例如拥有一种科学的上下文工程方法，可以根据新证据不断更新其假设。
 
 ### Uncertainty-Aware Component Selection Template
+不确定性感知组件选择模板
 
 ```xml
 <bayesian_component_selection>
@@ -419,8 +520,10 @@ Periodically evaluate:
 ```
 
 **Ground-up Explanation**: This XML template handles component selection when you're uncertain about what the user really wants, like a careful librarian who considers multiple possible interpretations of a request and selects resources that work well across different scenarios.
+**从头开始解释** ：当您不确定用户真正想要什么时，此 XML 模板会处理组件选择，例如细心的图书馆员会考虑对请求的多种可能解释并选择在不同场景中运行良好的资源。
 
 ### Risk-Aware Context Assembly Template
+风险感知上下文装配模板
 
 ```yaml
 # Risk-Aware Bayesian Context Assembly
@@ -571,14 +674,18 @@ risk_aware_assembly:
 ```
 
 **Ground-up Explanation**: This YAML template provides frameworks for making good context decisions even when you're uncertain about what's best, like a careful decision-maker who considers multiple scenarios and chooses strategies that work well even if their assumptions turn out to be wrong.
+**从头开始的解释** ：这个 YAML 模板提供了框架，即使您不确定什么是最好的，也可以做出良好的上下文决策，就像一个谨慎的决策者会考虑多种场景并选择有效的策略，即使他们的假设被证明是错误的。
 
----
+* * *
 
 ## Software 3.0 Paradigm 2: Programming (Bayesian Algorithms)
+软件 3.0 范式 2：编程（贝叶斯算法）
 
 Programming provides computational methods for implementing Bayesian reasoning, updating beliefs based on evidence, and making optimal decisions under uncertainty.
+编程提供了实现贝叶斯推理、根据证据更新信念以及在不确定性下做出最佳决策的计算方法。
 
 ### Bayesian Context Optimizer Implementation
+贝叶斯上下文优化器实现
 
 ```python
 import numpy as np
@@ -1080,64 +1187,101 @@ if __name__ == "__main__":
 ```
 
 **Ground-up Explanation**: This programming framework implements Bayesian reasoning as working algorithms. Like having a learning system that maintains beliefs about what works best and updates those beliefs based on evidence, enabling continuous improvement in context engineering decisions.
+**从头开始的解释** ：这个编程框架将贝叶斯推理作为工作算法实现。就像拥有一个学习系统，该系统可以保持对什么最有效的信念，并根据证据更新这些信念，从而能够持续改进上下文工程决策。
 
----
+* * *
 
 ## Research Connections and Future Directions
+研究联系和未来方向
 
 ### Connection to Context Engineering Survey
+与环境工程调查的联系
 
 This Bayesian inference module directly implements and extends foundational concepts from the [Context Engineering Survey](https://arxiv.org/pdf/2507.13334):
+这个贝叶斯推理模块直接实现和扩展了[上下文工程调查](https://arxiv.org/pdf/2507.13334)中的基本概念：
 
 **Adaptive Context Management (§4.3)**:
-- Implements dynamic context adaptation through Bayesian belief updating
-- Extends context management beyond static rules to probabilistic learning systems
-- Addresses context optimization under uncertainty through decision-theoretic frameworks
+**自适应上下文管理 （§4.3）：**
+
+*   Implements dynamic context adaptation through Bayesian belief updating
+    通过贝叶斯信念更新实现动态上下文适应
+*   Extends context management beyond static rules to probabilistic learning systems
+    将上下文管理从静态规则扩展到概率学习系统
+*   Addresses context optimization under uncertainty through decision-theoretic frameworks
+    通过决策论框架解决不确定性下的上下文优化问题
 
 **Self-Refinement and Learning (§4.2)**:
-- Tackles iterative context improvement through Bayesian posterior updating
-- Implements feedback integration for continuous context strategy refinement
-- Provides mathematical frameworks for learning from user interactions
+**自我完善和学习（§4.2）：**
+
+*   Tackles iterative context improvement through Bayesian posterior updating
+    通过贝叶斯后验更新解决迭代上下文改进问题
+*   Implements feedback integration for continuous context strategy refinement
+    实施反馈集成以持续完善上下文策略
+*   Provides mathematical frameworks for learning from user interactions
+    提供用于从用户交互中学习的数学框架
 
 **Future Research Foundations (§7.1)**:
-- Demonstrates theoretical foundations for adaptive context systems
-- Implements uncertainty quantification and decision-making under incomplete information
-- Provides framework for context systems that reason about their own uncertainty
+**未来研究基础 （§7.1）：**
+
+*   Demonstrates theoretical foundations for adaptive context systems
+    展示自适应上下文系统的理论基础
+*   Implements uncertainty quantification and decision-making under incomplete information
+    在信息不完整的情况下实现不确定性量化和决策
+*   Provides framework for context systems that reason about their own uncertainty
+    为上下文系统提供框架，这些系统可以推理自己的不确定性
 
 ### Novel Contributions Beyond Current Research
+超越当前研究的新贡献
 
 **Probabilistic Context Engineering Framework**: While the survey covers adaptive techniques, our systematic application of Bayesian inference to context strategy selection represents novel research into principled uncertainty management and learning in context engineering systems.
+**概率上下文工程框架** ：虽然调查涵盖了自适应技术，但我们将贝叶斯推理系统地应用于上下文策略选择代表了对上下文工程系统中原则性不确定性管理和学习的新研究。
 
 **Uncertainty-Aware Component Selection**: Our development of Bayesian approaches to component relevance assessment and selection under uncertainty extends beyond current deterministic approaches to provide mathematically grounded confidence estimates and risk management.
+**不确定性感知组件选择** ：我们开发的贝叶斯方法在不确定性下评估和选择组件相关性，超越了当前的确定性方法，提供基于数学的置信度估计和风险管理。
 
 **Meta-Learning for Context Strategies**: The integration of Bayesian belief updating about strategy effectiveness represents advancement toward context systems that learn how to learn, optimizing their own optimization processes.
+**上下文策略的元学习** ：关于策略有效性的贝叶斯信念更新的整合代表了向学习如何学习、优化自身优化过程的上下文系统的进步。
 
 **Risk-Aware Context Assembly**: Our frameworks for decision-making under uncertainty with explicit risk management represent frontier research into robust context engineering that performs well even when assumptions are violated.
+**风险感知上下文组装** ：我们通过显式风险管理在不确定性下进行决策的框架代表了对稳健上下文工程的前沿研究，即使在违反假设的情况下也能表现良好。
 
 ### Future Research Directions
+未来的研究方向
 
 **Hierarchical Bayesian Context Models**: Research into multi-level Bayesian models where beliefs about context strategies, component relevance, and user preferences are organized in hierarchical structures, enabling more sophisticated learning and generalization.
+**分层贝叶斯上下文模型** ：研究多级贝叶斯模型，其中对上下文策略、组件相关性和用户偏好的信念被组织在分层结构中，从而实现更复杂的学习和泛化。
 
 **Bayesian Neural Context Networks**: Investigation of hybrid approaches combining Bayesian inference with neural networks for context optimization, leveraging both principled uncertainty quantification and neural pattern recognition capabilities.
+**贝叶斯神经上下文网络** ：研究将贝叶斯推理与神经网络相结合的混合方法进行上下文优化，利用原则性的不确定性量化和神经模式识别能力。
 
 **Causal Bayesian Context Engineering**: Development of Bayesian frameworks that reason about causal relationships between context choices and outcomes, enabling more robust generalization and counterfactual reasoning.
+**因果贝叶斯上下文工程** ：开发贝叶斯框架，推理上下文选择和结果之间的因果关系，实现更稳健的概括和反事实推理。
 
 **Multi-Agent Bayesian Context Coordination**: Research into Bayesian approaches for coordinating context engineering across multiple AI agents, with shared learning and distributed belief updating.
+**多智能体贝叶斯上下文协调** ：研究跨多个人工智能代理协调上下文工程的贝叶斯方法，包括共享学习和分布式信念更新。
 
 **Temporal Bayesian Context Dynamics**: Investigation of time-dependent Bayesian models where context strategies and user preferences evolve over time, requiring dynamic adaptation of belief updating mechanisms.
+**时间贝叶斯上下文动力学** ：研究与时间相关的贝叶斯模型，其中上下文策略和用户偏好随时间演变，需要对信念更新机制进行动态适应。
 
 **Robust Bayesian Context Optimization**: Research into Bayesian approaches that are robust to model misspecification and adversarial inputs, ensuring reliable performance even when underlying assumptions are violated.
+**鲁棒贝叶斯上下文优化** ：研究贝叶斯方法，这些方法对错误规范和对抗性输入具有鲁棒性，即使在违反基本假设的情况下也能确保可靠的性能。
 
 **Interpretable Bayesian Context Decisions**: Development of methods for explaining Bayesian context decisions to users, providing transparency about uncertainty, confidence levels, and decision reasoning.
+**可解释的贝叶斯上下文决策** ：开发向用户解释贝叶斯上下文决策的方法，提供不确定性、置信度和决策推理的透明度。
 
 **Online Bayesian Context Learning**: Investigation of efficient online learning algorithms for Bayesian context optimization that can adapt in real-time with minimal computational overhead.
+**在线贝叶斯上下文学习** ：研究用于贝叶斯上下文优化的高效在线学习算法，该算法可以实时适应，计算开销最小。
 
----
+* * *
 
 ## Practical Exercises and Projects
+实践练习和项目
 
 ### Exercise 1: Bayesian Strategy Updater
+练习 1：贝叶斯策略更新程序
+
 **Goal**: Implement Bayesian updating for context strategy beliefs
+**目标** ：为上下文策略信念实施贝叶斯更新
 
 ```python
 # Your implementation template
@@ -1166,7 +1310,10 @@ updater = BayesianStrategyUpdater(['technical', 'practical', 'balanced'])
 ```
 
 ### Exercise 2: Component Relevance Estimator
+练习 2：组件相关性估计器
+
 **Goal**: Build Bayesian system for estimating component relevance under uncertainty
+**目标** ：构建用于估计不确定性下组件相关性的贝叶斯系统
 
 ```python
 class ComponentRelevanceEstimator:
@@ -1194,7 +1341,10 @@ estimator = ComponentRelevanceEstimator()
 ```
 
 ### Exercise 3: Adaptive Context System
+练习 3：自适应上下文系统
+
 **Goal**: Create complete Bayesian context system that learns from feedback
+**目标** ：创建完整的贝叶斯上下文系统，从反馈中学习
 
 ```python
 class AdaptiveBayesianContextSystem:
@@ -1220,49 +1370,85 @@ class AdaptiveBayesianContextSystem:
 adaptive_system = AdaptiveBayesianContextSystem()
 ```
 
----
+* * *
 
 ## Summary and Next Steps
+总结和后续步骤
 
 ### Key Concepts Mastered
+掌握的关键概念
 
 **Bayesian Inference Foundations**:
-- Bayes' theorem: P(H|E) = P(E|H) × P(H) / P(E)
-- Posterior updating based on evidence and likelihood models
-- Uncertainty quantification through probability distributions
-- Decision-making under uncertainty using expected utility
+**贝叶斯推理基础** ：
+
+*   Bayes' theorem: P(H|E) = P(E|H) × P(H) / P(E)
+    贝叶斯定理：P（H|E） = P（E|H） × P（H） / P（E）
+*   Posterior updating based on evidence and likelihood models
+    基于证据和似然模型的后验更新
+*   Uncertainty quantification through probability distributions
+    通过概率分布量化不确定性
+*   Decision-making under uncertainty using expected utility
+    使用预期效用在不确定性下做出决策
 
 **Three Paradigm Integration**:
-- **Prompts**: Strategic templates for probabilistic reasoning and uncertainty management
-- **Programming**: Computational algorithms for Bayesian belief updating and decision-making
-- **Protocols**: Adaptive systems that learn optimal strategies through probabilistic feedback
+**三种范式集成** ：
+
+*   **Prompts**: Strategic templates for probabilistic reasoning and uncertainty management
+    **提示** ：概率推理和不确定性管理的战略模板
+*   **Programming**: Computational algorithms for Bayesian belief updating and decision-making
+    **编程** ：用于贝叶斯信念更新和决策的计算算法
+*   **Protocols**: Adaptive systems that learn optimal strategies through probabilistic feedback
+    **协议** ：通过概率反馈学习最佳策略的自适应系统
 
 **Advanced Bayesian Applications**:
-- Strategy selection based on posterior probability distributions
-- Component relevance estimation using Beta distributions
-- Risk-aware decision-making with uncertainty penalties
-- Meta-learning for continuous improvement of belief updating
+**高级贝叶斯应用** ：
+
+*   Strategy selection based on posterior probability distributions
+    基于后验概率分布的策略选择
+*   Component relevance estimation using Beta distributions
+    使用 Beta 分布进行组件相关性估计
+*   Risk-aware decision-making with uncertainty penalties
+    具有不确定性惩罚的风险意识决策
+*   Meta-learning for continuous improvement of belief updating
+    元学习持续改进信念更新
 
 ### Practical Mastery Achieved
+已掌握实践
 
 You can now:
-1. **Reason under uncertainty** using principled Bayesian methods
-2. **Update beliefs systematically** based on evidence and feedback
-3. **Make optimal decisions** when information is incomplete or uncertain
-4. **Quantify confidence** in context engineering decisions
-5. **Build adaptive systems** that learn from experience and improve over time
+您现在可以：
+
+1.  **Reason under uncertainty** using principled Bayesian methods
+    使用原则贝叶斯方法在**不确定性下推理**
+2.  **Update beliefs systematically** based on evidence and feedback
+    根据证据和反馈系统**地更新信念**
+3.  **Make optimal decisions** when information is incomplete or uncertain
+    在信息不完整或不确定时**做出最佳决策**
+4.  **Quantify confidence** in context engineering decisions
+    **量化**对上下文工程决策的信心
+5.  **Build adaptive systems** that learn from experience and improve over time
+    **构建自适应系统** ，从经验中学习并随着时间的推移进行改进
 
 ### Connection to Course Progression
+与课程进度的联系
 
 This Bayesian foundation completes the mathematical foundations and enables:
-- **Advanced Context Systems**: Probabilistic optimization in real-world applications
-- **Multi-Agent Coordination**: Bayesian approaches to distributed context engineering
-- **Human-AI Collaboration**: Uncertainty-aware systems that communicate confidence
-- **Research Applications**: Contributing to probabilistic context engineering research
+这个贝叶斯基础完成了数学基础并实现了：
+
+*   **Advanced Context Systems**: Probabilistic optimization in real-world applications
+    **高级上下文系统** ：实际应用中的概率优化
+*   **Multi-Agent Coordination**: Bayesian approaches to distributed context engineering
+    **多智能体协调** ：分布式上下文工程的贝叶斯方法
+*   **Human-AI Collaboration**: Uncertainty-aware systems that communicate confidence
+    **人机协作** ：传达信心的不确定性感知系统
+*   **Research Applications**: Contributing to probabilistic context engineering research
+    **研究应用** ：为概率环境工程研究做出贡献
 
 ### The Complete Mathematical Framework
+完整的数学框架
 
 You now possess the complete mathematical toolkit for Context Engineering:
+您现在拥有了完整的上下文工程数学工具包：
 
 ```
 Context Formalization: C = A(c₁, c₂, ..., c₆)
@@ -1272,85 +1458,134 @@ Bayesian Inference: P(Strategy|Evidence) updating
 ```
 
 This progression from deterministic formalization to probabilistic adaptation represents the evolution from basic context engineering to sophisticated, learning-enabled systems.
+从确定性形式化到概率适应的这种进展代表了从基本上下文工程到复杂的学习系统的演变。
 
 ### Real-World Impact
+现实世界的影响
 
 The Bayesian approach to context engineering enables:
-- **Personalized AI Systems**: That learn individual user preferences over time
-- **Robust Enterprise Applications**: That perform well even with uncertain or incomplete information
-- **Adaptive Learning Platforms**: That continuously improve their teaching strategies
-- **Intelligent Decision Support**: That communicates confidence and uncertainty appropriately
+上下文工程的贝叶斯方法支持：
 
----
+*   **Personalized AI Systems**: That learn individual user preferences over time
+    **个性化人工智能系统** ：随着时间的推移了解个人用户的偏好
+*   **Robust Enterprise Applications**: That perform well even with uncertain or incomplete information
+    **强大的企业应用程序** ：即使信息不确定或不完整，也能表现良好
+*   **Adaptive Learning Platforms**: That continuously improve their teaching strategies
+    **自适应学习平台** ：不断改进他们的教学策略
+*   **Intelligent Decision Support**: That communicates confidence and uncertainty appropriately
+    **智能决策支持** ：适当地传达信心和不确定性
+
+* * *
 
 ## Research Connections and Future Directions
+研究联系和未来方向
 
 ### Connection to Context Engineering Survey
+与环境工程调查的联系
 
 This Bayesian inference module directly implements and extends foundational concepts from the [Context Engineering Survey](https://arxiv.org/pdf/2507.13334):
+这个贝叶斯推理模块直接实现和扩展了[上下文工程调查](https://arxiv.org/pdf/2507.13334)中的基本概念：
 
 **Adaptive Context Management (§4.3)**:
-- Implements dynamic context adaptation through Bayesian belief updating
-- Extends context management beyond static rules to probabilistic learning systems
-- Addresses context optimization under uncertainty through decision-theoretic frameworks
+**自适应上下文管理 （§4.3）：**
+
+*   Implements dynamic context adaptation through Bayesian belief updating
+    通过贝叶斯信念更新实现动态上下文适应
+*   Extends context management beyond static rules to probabilistic learning systems
+    将上下文管理从静态规则扩展到概率学习系统
+*   Addresses context optimization under uncertainty through decision-theoretic frameworks
+    通过决策论框架解决不确定性下的上下文优化问题
 
 **Self-Refinement and Learning (§4.2)**:
-- Tackles iterative context improvement through Bayesian posterior updating
-- Implements feedback integration for continuous context strategy refinement
-- Provides mathematical frameworks for learning from user interactions
+**自我完善和学习（§4.2）：**
+
+*   Tackles iterative context improvement through Bayesian posterior updating
+    通过贝叶斯后验更新解决迭代上下文改进问题
+*   Implements feedback integration for continuous context strategy refinement
+    实施反馈集成以持续完善上下文策略
+*   Provides mathematical frameworks for learning from user interactions
+    提供用于从用户交互中学习的数学框架
 
 **Future Research Foundations (§7.1)**:
-- Demonstrates theoretical foundations for adaptive context systems
-- Implements uncertainty quantification and decision-making under incomplete information
-- Provides framework for context systems that reason about their own uncertainty
+**未来研究基础 （§7.1）：**
+
+*   Demonstrates theoretical foundations for adaptive context systems
+    展示自适应上下文系统的理论基础
+*   Implements uncertainty quantification and decision-making under incomplete information
+    在信息不完整的情况下实现不确定性量化和决策
+*   Provides framework for context systems that reason about their own uncertainty
+    为上下文系统提供框架，这些系统可以推理自己的不确定性
 
 ### Novel Contributions Beyond Current Research
+超越当前研究的新贡献
 
 **Probabilistic Context Engineering Framework**: While the survey covers adaptive techniques, our systematic application of Bayesian inference to context strategy selection represents novel research into principled uncertainty management and learning in context engineering systems.
+**概率上下文工程框架** ：虽然调查涵盖了自适应技术，但我们将贝叶斯推理系统地应用于上下文策略选择代表了对上下文工程系统中原则性不确定性管理和学习的新研究。
 
 **Uncertainty-Aware Component Selection**: Our development of Bayesian approaches to component relevance assessment and selection under uncertainty extends beyond current deterministic approaches to provide mathematically grounded confidence estimates and risk management.
+**不确定性感知组件选择** ：我们开发的贝叶斯方法在不确定性下评估和选择组件相关性，超越了当前的确定性方法，提供基于数学的置信度估计和风险管理。
 
 **Meta-Learning for Context Strategies**: The integration of Bayesian belief updating about strategy effectiveness represents advancement toward context systems that learn how to learn, optimizing their own optimization processes.
+**上下文策略的元学习** ：关于策略有效性的贝叶斯信念更新的整合代表了向学习如何学习、优化自身优化过程的上下文系统的进步。
 
 **Risk-Aware Context Assembly**: Our frameworks for decision-making under uncertainty with explicit risk management represent frontier research into robust context engineering that performs well even when assumptions are violated.
+**风险感知上下文组装** ：我们通过显式风险管理在不确定性下进行决策的框架代表了对稳健上下文工程的前沿研究，即使在违反假设的情况下也能表现良好。
 
 ### Future Research Directions
+未来的研究方向
 
 **Hierarchical Bayesian Context Models**: Research into multi-level Bayesian models where beliefs about context strategies, component relevance, and user preferences are organized in hierarchical structures, enabling more sophisticated learning and generalization.
+**分层贝叶斯上下文模型** ：研究多级贝叶斯模型，其中对上下文策略、组件相关性和用户偏好的信念被组织在分层结构中，从而实现更复杂的学习和泛化。
 
 **Bayesian Neural Context Networks**: Investigation of hybrid approaches combining Bayesian inference with neural networks for context optimization, leveraging both principled uncertainty quantification and neural pattern recognition capabilities.
+**贝叶斯神经上下文网络** ：研究将贝叶斯推理与神经网络相结合的混合方法进行上下文优化，利用原则性的不确定性量化和神经模式识别能力。
 
 **Causal Bayesian Context Engineering**: Development of Bayesian frameworks that reason about causal relationships between context choices and outcomes, enabling more robust generalization and counterfactual reasoning.
+**因果贝叶斯上下文工程** ：开发贝叶斯框架，推理上下文选择和结果之间的因果关系，实现更稳健的概括和反事实推理。
 
 **Multi-Agent Bayesian Context Coordination**: Research into Bayesian approaches for coordinating context engineering across multiple AI agents, with shared learning and distributed belief updating.
+**多智能体贝叶斯上下文协调** ：研究跨多个人工智能代理协调上下文工程的贝叶斯方法，包括共享学习和分布式信念更新。
 
 **Temporal Bayesian Context Dynamics**: Investigation of time-dependent Bayesian models where context strategies and user preferences evolve over time, requiring dynamic adaptation of belief updating mechanisms.
+**时间贝叶斯上下文动力学** ：研究与时间相关的贝叶斯模型，其中上下文策略和用户偏好随时间演变，需要对信念更新机制进行动态适应。
 
 **Robust Bayesian Context Optimization**: Research into Bayesian approaches that are robust to model misspecification and adversarial inputs, ensuring reliable performance even when underlying assumptions are violated.
+**鲁棒贝叶斯上下文优化** ：研究贝叶斯方法，这些方法对错误规范和对抗性输入具有鲁棒性，即使在违反基本假设的情况下也能确保可靠的性能。
 
 **Interpretable Bayesian Context Decisions**: Development of methods for explaining Bayesian context decisions to users, providing transparency about uncertainty, confidence levels, and decision reasoning.
+**可解释的贝叶斯上下文决策** ：开发向用户解释贝叶斯上下文决策的方法，提供不确定性、置信度和决策推理的透明度。
 
 **Online Bayesian Context Learning**: Investigation of efficient online learning algorithms for Bayesian context optimization that can adapt in real-time with minimal computational overhead.
+**在线贝叶斯上下文学习** ：研究用于贝叶斯上下文优化的高效在线学习算法，该算法可以实时适应，计算开销最小。
 
 ### Emerging Applications
+新兴应用
 
 **Personalized Education Systems**: Bayesian context engineering for adaptive learning platforms that continuously refine their teaching strategies based on student performance and engagement feedback.
+**个性化教育系统** ：用于自适应学习平台的贝叶斯语境工程，根据学生的表现和参与度反馈不断完善其教学策略。
 
 **Healthcare Decision Support**: Uncertainty-aware context systems for medical diagnosis and treatment recommendation that appropriately communicate confidence levels and manage risk.
+**医疗保健决策支持** ：用于医疗诊断和治疗建议的不确定性感知上下文系统，可适当传达信心水平并管理风险。
 
 **Financial Advisory Systems**: Bayesian context optimization for investment advice and financial planning that accounts for market uncertainty and individual risk tolerance.
+**财务咨询系统** ：贝叶斯上下文优化，用于投资建议和财务规划，考虑市场不确定性和个人风险承受能力。
 
 **Scientific Research Assistance**: Context systems that help researchers by learning their preferences, adapting to their expertise level, and managing uncertainty in rapidly evolving fields.
+**科学研究协助** ：上下文系统，通过了解研究人员的偏好、适应他们的专业水平以及管理快速发展领域的不确定性来帮助研究人员。
 
 **Legal Research and Analysis**: Bayesian approaches to legal context assembly that account for case law uncertainty, jurisdictional variations, and evolving legal interpretations.
+**法律研究与分析** ：贝叶斯法律背景组装方法，考虑判例法的不确定性、管辖权的变化和不断变化的法律解释。
 
----
+* * *
 
 ## Advanced Integration: The Meta-Recursive Context Engineer
+高级集成：元递归上下文工程师
 
 ### Bringing It All Together
+将这一切整合在一起
 
 The four mathematical foundations you've mastered create a powerful meta-recursive system:
+您掌握的四个数学基础创建了一个强大的元递归系统：
 
 ```
 Bayesian Context Meta-Engineer:
@@ -1369,6 +1604,7 @@ Bayesian Context Meta-Engineer:
 ```
 
 ### The Self-Improving Loop
+自我完善的循环
 
 ```
     [Mathematical Formalization]
@@ -1385,71 +1621,103 @@ Bayesian Context Meta-Engineer:
 ```
 
 This creates a context engineering system that:
-- **Formally structures** context assembly problems
-- **Systematically optimizes** assembly strategies
-- **Precisely measures** information value and relevance
-- **Probabilistically adapts** based on experience and uncertainty
-- **Continuously improves** its own mathematical models
+这将创建一个上下文工程系统，该系统：
+
+*   **Formally structures** context assembly problems
+    **形式上构建**上下文汇编问题
+*   **Systematically optimizes** assembly strategies
+    **系统地优化**装配策略
+*   **Precisely measures** information value and relevance
+    **精确衡量**信息价值和相关性
+*   **Probabilistically adapts** based on experience and uncertainty
+    根据经验和不确定性进行**概率调整**
+*   **Continuously improves** its own mathematical models
+    **不断改进**自己的数学模型
 
 ### Practical Implementation Strategy
+实务实施策略
 
 For real-world applications, implement this progressively:
+对于实际应用，请逐步实现：
 
-1. **Start with Formalization**: Structure your context engineering problem using C = A(c₁, c₂, ..., c₆)
-2. **Add Optimization**: Implement basic optimization for component selection and assembly
-3. **Integrate Information Theory**: Add mutual information calculations for relevance assessment
-4. **Enable Bayesian Learning**: Implement belief updating and uncertainty-aware decision making
-5. **Create Meta-Recursive Loops**: Enable the system to improve its own mathematical models
+1.  **Start with Formalization**: Structure your context engineering problem using C = A(c₁, c₂, ..., c₆)
+    从**形式化开始** ：使用 C = A（c₁， c₂， ...， c₆） 构建上下文工程问题
+2.  **Add Optimization**: Implement basic optimization for component selection and assembly
+    **添加优化** ：对元件选择和装配进行基本优化
+3.  **Integrate Information Theory**: Add mutual information calculations for relevance assessment
+    **集成信息论** ：添加相互信息计算以进行相关性评估
+4.  **Enable Bayesian Learning**: Implement belief updating and uncertainty-aware decision making
+    **启用贝叶斯学习** ：实施信念更新和不确定性感知决策
+5.  **Create Meta-Recursive Loops**: Enable the system to improve its own mathematical models
+    **创建元递归循环** ：使系统能够改进自己的数学模型
 
 ### The Future of Context Engineering
+上下文工程的未来
 
 This mathematical foundation positions you at the forefront of Context Engineering research and application. You're equipped to:
+这种数学基础使你处于情境工程研究和应用的最前沿。你具备：
 
-- **Contribute to Academic Research**: Build on the 1,400+ papers analyzed in the survey
-- **Develop Industrial Applications**: Create production-scale context engineering systems
-- **Advance the Field**: Explore frontier areas like quantum context engineering and multi-modal integration
-- **Bridge Theory and Practice**: Translate mathematical insights into practical AI improvements
+*   **Contribute to Academic Research**: Build on the 1,400+ papers analyzed in the survey
+    **为学术研究做出贡献** ：以调查中分析的 1,400+ 篇论文为基础
+*   **Develop Industrial Applications**: Create production-scale context engineering systems
+    **开发工业应用程序** ：创建生产规模的上下文工程系统
+*   **Advance the Field**: Explore frontier areas like quantum context engineering and multi-modal integration
+    推进**该领域** ：探索量子上下文工程和多模态集成等前沿领域
+*   **Bridge Theory and Practice**: Translate mathematical insights into practical AI improvements
+    理论**与实践的桥梁** ：将数学见解转化为实际的人工智能改进
 
----
+* * *
 
 ## Course Completion Achievement
+课程结业成绩
 
 ### Mathematical Mastery Achieved
+数学掌握
 
 You have successfully mastered the complete mathematical foundation of Context Engineering:
+您已经成功掌握了上下文工程的完整数学基础：
 
-✅ **Context Formalization**: Mathematical structure and component analysis
-✅ **Optimization Theory**: Systematic improvement and decision-making
-✅ **Information Theory**: Quantitative relevance and value measurement
-✅ **Bayesian Inference**: Probabilistic learning and uncertainty management
+✅ **Context Formalization**: Mathematical structure and component analysis ✅ **Optimization Theory**: Systematic improvement and decision-making ✅ **Information Theory**: Quantitative relevance and value measurement ✅ **Bayesian Inference**: Probabilistic learning and uncertainty management
+✅ **上下文形式化** ：数学结构和组件分析 ✅ **优化理论** ：系统改进和决策 ✅ **信息论** ：定量相关性和价值测量 ✅ **贝叶斯推理** ：概率学习和不确定性管理
 
 ### Three-Paradigm Integration Mastery
+掌握三范式集成
 
-✅ **Prompts**: Strategic templates for systematic reasoning
-✅ **Programming**: Computational algorithms for mathematical implementation
-✅ **Protocols**: Adaptive systems for continuous improvement
+✅ **Prompts**: Strategic templates for systematic reasoning ✅ **Programming**: Computational algorithms for mathematical implementation ✅ **Protocols**: Adaptive systems for continuous improvement
+✅ **提示** ：系统推理✅的战略模板 **编程** ：数学实现✅的计算算法 **协议** ：持续改进的自适应系统
 
 ### Research and Application Readiness
+研究和应用准备
 
 You are now prepared to:
-- **Conduct Original Research** in context engineering
-- **Build Production Systems** with mathematical rigor
-- **Contribute to Open Source** context engineering frameworks
-- **Advance the Field** through novel applications and techniques
+您现在已准备好：
 
-**Congratulations on completing the Mathematical Foundations of Context Engineering!**
+*   **Conduct Original Research** in context engineering
+    在情境工程中**进行原创研究**
+*   **Build Production Systems** with mathematical rigor
+    构建具有数学严谨性的**生产系统**
+*   **Contribute to Open Source** context engineering frameworks
+    **为开源**上下文工程框架做出贡献
+*   **Advance the Field** through novel applications and techniques
+    通过新颖的应用和技术推动**该领域的发展**
+
+**Congratulations on completing the Mathematical Foundations of Context Engineering!
+恭喜您完成了上下文工程的数学基础！**
 
 The journey continues with advanced implementations, real-world applications, and cutting-edge research directions. You now possess the mathematical toolkit to transform how AI systems understand, process, and respond to human needs through optimal information organization.
+随着先进的实施、实际应用和前沿的研究方向，这一旅程仍在继续。您现在拥有数学工具包，可以通过最佳信息组织来改变人工智能系统理解、处理和响应人类需求的方式。
 
----
+* * *
 
 ## Quick Reference: Complete Mathematical Framework
+快速参考：完整的数学框架
 
-| Module | Key Formula | Application |
-|--------|-------------|-------------|
-| **Formalization** | C = A(c₁, c₂, ..., c₆) | Structure context assembly |
-| **Optimization** | F* = arg max E[Reward(C)] | Find optimal strategies |
-| **Information Theory** | I(Context; Query) | Measure relevance and value |
-| **Bayesian Inference** | P(Strategy\|Evidence) | Learn and adapt under uncertainty |
+| Module模块 | Key Formula关键公式 | Application应用 |
+| --- | --- | --- |
+| Formalization形式化 | C = A(c₁, c₂, ..., c₆)C = A（c₁， c₂， ...， c₆） | Structure context assembly结构上下文装配 |
+| Optimization优化 | F\* = arg max E\[Reward(C)\]F\* = 参数最大 E\[奖励（C）\] | Find optimal strategies寻找最佳策略 |
+| Information Theory信息论 | I(Context; Query)I（上下文;查询） | Measure relevance and value衡量相关性和价值 |
+| Bayesian Inference贝叶斯推理 | P(Strategy|Evidence)P（策略|证据） | Learn and adapt under uncertainty在不确定性中学习和适应 |
 
 This mathematical mastery transforms context engineering from an art into a science, enabling systematic optimization, continuous learning, and measurable improvement in AI system performance.
+这种数学掌握将上下文工程从一门艺术转变为一门科学，从而实现系统优化、持续学习和人工智能系统性能的可衡量改进。
