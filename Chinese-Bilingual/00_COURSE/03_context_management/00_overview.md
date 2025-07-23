@@ -1,15 +1,22 @@
 # Context Management: The Software 3.0 Revolution
+上下文管理：软件 3.0 革命
+
 > "It is the mark of an educated mind to be able to entertain a thought without accepting it."
->
-> — [Aristotle](https://www.goodreads.com/quotes/1629-it-is-the-mark-of-an-educated-mind-to-be)
+> “能够在不接受一个想法的情况下接受它，这是受过教育的头脑的标志。”
 > 
+> — [Aristotle](https://www.goodreads.com/quotes/1629-it-is-the-mark-of-an-educated-mind-to-be)
+> — [亚里士多德](https://www.goodreads.com/quotes/1629-it-is-the-mark-of-an-educated-mind-to-be)
+
 ## The Paradigm Shift: From Code to Context
-> [**Software Is Changing (Again) Talk @YC AI Startup School—Andrej Karpathy**](https://www.youtube.com/watch?v=LCEmiRjPEtQ)
+范式转变：从代码到上下文
+
+> [**Software Is Changing (Again) Talk @YC AI Startup School—Andrej Karpathy
+> 软件正在改变（再次）人工智能创业学校@YC 谈话——安德烈·卡帕西**](https://www.youtube.com/watch?v=LCEmiRjPEtQ)
 
 We are witnessing the emergence of [**Software 3.0**](https://x.com/karpathy/status/1935518272667217925) - a new era of innovation where structured prompting becomes programming, and context engineering becomes the new software architecture. This represents a fundamental shift in how we build intelligent systems.
+我们正在见证[**软件 3.0**](https://x.com/karpathy/status/1935518272667217925) 的出现——一个创新的新时代，结构化提示变成编程，上下文工程成为新的软件架构。这代表了我们构建智能系统的方式的根本转变。
 
-<img width="1917" height="360" alt="image" src="https://github.com/user-attachments/assets/91457d09-434c-4476-a0ed-2d78a19c4154" />
-
+![image](https://github.com/user-attachments/assets/91457d09-434c-4476-a0ed-2d78a19c4154)
 
 ```
 SOFTWARE 1.0: Manual Programming
@@ -28,24 +35,31 @@ SOFTWARE 3.0: Context Engineering
 └─ Dynamic, contextually-aware execution
 ```
 
-
-
-
 ## The Three Pillars: A Beginner's Guide
+三大支柱：初学者指南
 
 ### What Are These Three Things?
+这三件事是什么？
 
-**Think of building a house:**
-- **PROMPTS** = Talking to the architect (communication)
-- **PROGRAMMING** = The construction tools and techniques (implementation)  
-- **PROTOCOLS** = The complete blueprint that coordinates everything (orchestration)
+**Think of building a house:
+想想盖房子：**
+
+*   **PROMPTS** = Talking to the architect (communication)
+    **PROMPTS** = 与架构师交谈（沟通）
+*   **PROGRAMMING** = The construction tools and techniques (implementation)
+    编程 **\= 施工**工具和技术（实现）
+*   **PROTOCOLS** = The complete blueprint that coordinates everything (orchestration)
+    **PROTOCOLS** = 协调一切的完整蓝图（编排）
 
 ### Pillar 1: PROMPT TEMPLATES - The Communication Layer
+支柱 1：提示模板 - 通信层
 
-**What is a Prompt Template?**
-A prompt template is a reusable pattern for communicating with an AI system. Instead of writing unique prompts each time, you create templates with placeholders that can be filled in.
+**What is a Prompt Template?** A prompt template is a reusable pattern for communicating with an AI system. Instead of writing unique prompts each time, you create templates with placeholders that can be filled in.
+**什么是提示模板？** 提示模板是与 AI 系统通信的可重用模式。您无需每次都编写独特的提示，而是创建带有可填写的占位符的模板。
 
-**Simple Example:**
+**Simple Example:
+简单示例：**
+
 ```
 Basic Prompt: "Analyze this code for bugs."
 
@@ -59,7 +73,9 @@ Code:
 "
 ```
 
-**Advanced Template with Structure:**
+**Advanced Template with Structure:
+具有结构的高级模板：**
+
 ```
 CONTEXT_ANALYSIS_TEMPLATE = """
 # Context Analysis Request
@@ -84,17 +100,27 @@ Please analyze the provided information according to these parameters and provid
 """
 ```
 
-**Why Templates Matter:**
-- **Consistency**: Same format every time
-- **Reusability**: Use across different projects  
-- **Scalability**: Easy to modify and extend
-- **Quality**: Reduces errors and omissions
+**Why Templates Matter:
+为什么模板很重要：**
+
+*   **Consistency**: Same format every time
+    **一致性** ：每次都采用相同的格式
+*   **Reusability**: Use across different projects
+    **可重用性** ：跨不同项目使用
+*   **Scalability**: Easy to modify and extend
+    可**扩展性** ：易于修改和扩展
+*   **Quality**: Reduces errors and omissions
+    **质量** ：减少错误和遗漏
 
 ### Pillar 2: PROGRAMMING - The Implementation Layer
+支柱 2：编程 - 实现层
 
 Programming provides the computational infrastructure that supports context management.
+编程提供了支持上下文管理的计算基础设施。
 
-**Traditional Context Management Code:**
+**Traditional Context Management Code:
+传统上下文管理代码：**
+
 ```python
 class ContextManager:
     """Traditional programming approach to context management"""
@@ -161,7 +187,9 @@ class ContextManager:
         return [item[1] for item in relevant_items]
 ```
 
-**Integration with Prompt Templates:**
+**Integration with Prompt Templates:
+与提示模板集成：**
+
 ```python
 def generate_contextual_prompt(self, base_template, query, context_items):
     """Combine template with relevant context"""
@@ -181,26 +209,45 @@ def generate_contextual_prompt(self, base_template, query, context_items):
 ```
 
 ### Pillar 3: PROTOCOLS - The Orchestration Layer
+支柱 3：协议 - 编排层
 
-**What is a Protocol? (Simple Explanation)**
+**What is a Protocol? (Simple Explanation)
+什么是协议？（简单说明）**
 
 A protocol is like a **recipe that thinks**. Just as a cooking recipe tells you:
-- What ingredients you need (inputs)
-- What steps to follow (process)  
-- What you should end up with (outputs)
+协议就像一个**会思考的食谱** 。正如烹饪食谱告诉你的那样：
+
+*   What ingredients you need (inputs)
+    您需要什么成分（投入）
+*   What steps to follow (process)
+    要遵循的步骤（流程）
+*   What you should end up with (outputs)
+    你最终应该得到什么（输出）
 
 A protocol tells the AI system:
-- What information to gather (inputs)
-- How to process that information (steps)
-- How to format and deliver results (outputs)
+一个协议告诉人工智能系统：
 
-**But unlike a simple recipe, protocols are:**
-- **Adaptive**: They can change based on conditions
-- **Recursive**: They can call themselves or other protocols
-- **Context-aware**: They consider the current situation
-- **Composable**: They can combine with other protocols
+*   What information to gather (inputs)
+    要收集哪些信息（输入）
+*   How to process that information (steps)
+    如何处理该信息（步骤）
+*   How to format and deliver results (outputs)
+    如何格式化和交付结果（输出）
 
-**Basic Protocol Example:**
+**But unlike a simple recipe, protocols are:
+但与简单的配方不同的是，协议是：**
+
+*   **Adaptive**: They can change based on conditions
+    **自适应** ：它们可以根据条件而变化
+*   **Recursive**: They can call themselves or other protocols
+    **递归：** 他们可以调用自己或其他协议
+*   **Context-aware**: They consider the current situation
+    **情境感知** ：他们考虑当前情况
+*   **Composable**: They can combine with other protocols
+    可**组合：** 它们可以与其他协议结合使用
+
+**Basic Protocol Example:
+基本协议示例：**
 
 ```
 /analyze.text{
@@ -242,7 +289,8 @@ A protocol tells the AI system:
 }
 ```
 
-**Advanced Context Management Protocol:**
+**Advanced Context Management Protocol:
+高级上下文管理协议：**
 
 ```
 /context.orchestration{
@@ -346,12 +394,16 @@ A protocol tells the AI system:
 ```
 
 ## The Integration: How All Three Work Together
+集成：这三者如何协同工作
 
 ### Real-World Example: Code Review System
+真实示例：代码审查系统
 
 Let's build a comprehensive code review system that demonstrates all three pillars working together.
+让我们构建一个全面的代码审查系统，展示所有三个支柱协同工作。
 
-**1. PROMPT TEMPLATES (Communication Layer):**
+**1\. PROMPT TEMPLATES (Communication Layer):
+1\. 提示模板（通信层）：**
 
 ```python
 CODE_REVIEW_TEMPLATES = {
@@ -407,7 +459,8 @@ CODE_REVIEW_TEMPLATES = {
 }
 ```
 
-**2. PROGRAMMING (Implementation Layer):**
+**2\. PROGRAMMING (Implementation Layer):
+2\. 编程（实现层）：**
 
 ```python
 class CodeReviewOrchestrator:
@@ -486,7 +539,8 @@ class CodeReviewOrchestrator:
         return self.context_manager.optimize_context(context_elements)
 ```
 
-**3. PROTOCOLS (Orchestration Layer):**
+**3\. PROTOCOLS (Orchestration Layer):
+3\. 协议（编排层）：**
 
 ```
 /code.review.comprehensive{
@@ -656,7 +710,8 @@ class CodeReviewOrchestrator:
 }
 ```
 
-**4. THE COMPLETE INTEGRATION:**
+**4\. THE COMPLETE INTEGRATION:
+4\. 完全集成：**
 
 ```python
 # This is how all three pillars work together in practice:
@@ -717,22 +772,38 @@ result = reviewer.review_code(
 ```
 
 ## Why This Integration Matters
+为什么这种集成很重要
 
 ### Traditional Approach Problems:
-- **Rigid**: Same analysis every time
-- **Inefficient**: Lots of redundant work
-- **Limited**: Single perspective
-- **Hard to Scale**: Manual customization required
+传统方法问题：
+
+*   **Rigid**: Same analysis every time
+    **刚性：** 每次都进行相同的分析
+*   **Inefficient**: Lots of redundant work
+    **低效** ：大量冗余工作
+*   **Limited**: Single perspective
+    **有限：** 单视角
+*   **Hard to Scale**: Manual customization required
+    **难以扩展** ：需要手动定制
 
 ### Software 3.0 Solution Benefits:
-- **Adaptive**: Changes based on context and requirements
-- **Efficient**: Reuses templates and context intelligently  
-- **Comprehensive**: Multiple perspectives integrated systematically
-- **Scalable**: Easy to extend and customize for new scenarios
+软件 3.0 解决方案的优势：
+
+*   **Adaptive**: Changes based on context and requirements
+    **自适应** ：根据上下文和要求进行更改
+*   **Efficient**: Reuses templates and context intelligently
+    **高效** ：智能地重用模板和上下文
+*   **Comprehensive**: Multiple perspectives integrated systematically
+    **全面** ：多视角系统整合
+*   **Scalable**: Easy to extend and customize for new scenarios
+    **可扩展** ：易于针对新场景进行扩展和定制
 
 ## Key Principles for Beginners
+初学者的关键原则
 
-### 1. Start Simple, Build Complexity Gradually
+### 1\. Start Simple, Build Complexity Gradually
+1\. 从简单开始，逐渐构建复杂性
+
 ```
 Level 1: Basic Prompt Templates
 ├─ Fixed templates with placeholders
@@ -749,31 +820,55 @@ Level 3: Protocol Orchestration
 └─ Cross-system integration
 ```
 
-### 2. Think in Layers
-- **Communication Layer**: How you talk to the AI (prompts/templates)
-- **Logic Layer**: How you process information (programming)
-- **Orchestration Layer**: How you coordinate everything (protocols)
+### 2\. Think in Layers
+2\. 分层思考
 
-### 3. Focus on Reusability
-- Templates should work across similar scenarios
-- Code should be modular and composable
-- Protocols should be adaptable to different contexts
+*   **Communication Layer**: How you talk to the AI (prompts/templates)
+    **沟通层** ：如何与 AI 对话（提示/模板）
+*   **Logic Layer**: How you process information (programming)
+    **逻辑层** ：如何处理信息（编程）
+*   **Orchestration Layer**: How you coordinate everything (protocols)
+    **编排层** ：如何协调一切（协议）
 
-### 4. Optimize for Context
-- Everything should be context-aware
-- Information should flow efficiently between layers
-- The system should adapt based on available resources and constraints
+### 3\. Focus on Reusability
+3\. 注重可重用性
+
+*   Templates should work across similar scenarios
+    模板应适用于类似方案
+*   Code should be modular and composable
+    代码应该是模块化和可组合的
+*   Protocols should be adaptable to different contexts
+    协议应适应不同的环境
+
+### 4\. Optimize for Context
+4\. 针对上下文进行优化
+
+*   Everything should be context-aware
+    一切都应该是上下文感知的
+*   Information should flow efficiently between layers
+    信息应在层之间高效流动
+*   The system should adapt based on available resources and constraints
+    系统应根据可用资源和限制进行调整
 
 ## Next Steps in This Course
+本课程的后续步骤
 
 The following sections will dive deeper into:
-- **Fundamental Constraints**: How computational limits shape our approach
-- **Memory Hierarchies**: Multi-level storage and retrieval strategies  
-- **Compression Techniques**: Optimizing information density
-- **Optimization Strategies**: Performance and efficiency improvements
+以下部分将深入探讨：
+
+*   **Fundamental Constraints**: How computational limits shape our approach
+    **基本约束** ：计算限制如何塑造我们的方法
+*   **Memory Hierarchies**: Multi-level storage and retrieval strategies
+    **内存层次结构** ：多级存储和检索策略
+*   **Compression Techniques**: Optimizing information density
+    **压缩技术** ：优化信息密度
+*   **Optimization Strategies**: Performance and efficiency improvements
+    **优化策略** ：性能和效率的提高
 
 Each section will demonstrate the complete integration of prompts, programming, and protocols, showing how Software 3.0 principles apply to specific context management challenges.
+每个部分都将演示提示、编程和协议的完整集成，展示软件 3.0 原则如何应用于特定的上下文管理挑战。
 
----
+* * *
 
-*This overview establishes the foundation for understanding how prompts, programming, and protocols work together to create sophisticated, adaptable, and efficient context management systems. The integration of these three pillars represents the core of the Software 3.0 paradigm.*
+*This overview establishes the foundation for understanding how prompts, programming, and protocols work together to create sophisticated, adaptable, and efficient context management systems. The integration of these three pillars represents the core of the Software 3.0 paradigm.
+本概述为理解提示、编程和协议如何协同工作以创建复杂、适应性强且高效的上下文管理系统奠定了基础。这三大支柱的整合代表了软件 3.0 范式的核心。*
