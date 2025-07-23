@@ -1,53 +1,84 @@
 # Dynamic Context Assembly
+动态上下文汇编
+
 ## Context Composition Strategies and Intelligent Orchestration
+上下文组合策略和智能编排
 
 > **Module 01.3** | *Context Engineering Course: From Foundations to Frontier Systems*
+> **模块 01.3** | *上下文工程课程：从基础到前沿系统*
 > 
 > Building on [Context Engineering Survey](https://arxiv.org/pdf/2507.13334) | Advancing Software 3.0 Paradigms
+> 基于[情境工程调查](https://arxiv.org/pdf/2507.13334) |推进软件 3.0 范式
 
----
+* * *
 
 ## Learning Objectives
+学习目标
 
 By the end of this module, you will understand and implement:
+在本模块结束时，您将了解并实现：
 
-- **Dynamic Context Assembly**: Real-time composition of optimal context from multiple sources
-- **Context Optimization Strategies**: Balancing relevance, completeness, and cognitive load
-- **Multi-Component Integration**: Seamlessly combining instructions, knowledge, examples, and reasoning guidance
-- **Adaptive Context Systems**: Context assembly that learns and improves from outcomes
+*   **Dynamic Context Assembly**: Real-time composition of optimal context from multiple sources
+    **动态上下文汇编** ：实时组合来自多个来源的最佳上下文
+*   **Context Optimization Strategies**: Balancing relevance, completeness, and cognitive load
+    **上下文优化策略** ：平衡相关性、完整性和认知负荷
+*   **Multi-Component Integration**: Seamlessly combining instructions, knowledge, examples, and reasoning guidance
+    **多组件集成** ：无缝结合指令、知识、示例和推理指导
+*   **Adaptive Context Systems**: Context assembly that learns and improves from outcomes
+    **自适应上下文系统** ：从结果中学习和改进的上下文组装
 
----
+* * *
 
 ## Conceptual Progression: Static Context to Dynamic Orchestration
+概念进展：静态上下文到动态编排
 
 Think of context assembly like evolving from reading a pre-written script, to having a research assistant prepare materials, to having an intelligent director who understands your needs and dynamically orchestrates all the elements (information, examples, guidance, tools) in real-time for optimal performance.
+可以想象上下文组装，就像从阅读预先编写的脚本，到让研究助理准备材料，再到让一位智能导演了解您的需求并实时动态编排所有元素（信息、示例、指导、工具）以实现最佳性能。
 
 ### Stage 1: Static Context Assembly
+第 1 阶段：静态上下文汇编
+
 ```
 Fixed Template + User Query → Response
 ```
+
 **Context**: Like having a standard form to fill out. Consistent but inflexible - the same structure is used regardless of what the specific situation actually requires.
+**上下文** ：就像有一个标准表格需要填写一样。一致但不灵活 - 无论具体情况实际需要什么，都使用相同的结构。
 
 ### Stage 2: Template-Based Assembly
+第 2 阶段：基于模板的组装
+
 ```
 Select Template Based on Query Type → Fill Template → Response
 ```
+
 **Context**: Like having different standard forms for different situations. Better than one-size-fits-all, but still limited to pre-defined structures.
+**上下文** ：比如针对不同的情况有不同的标准形式。比一刀切更好，但仍仅限于预定义的结构。
 
 ### Stage 3: Component-Based Assembly
+第 3 阶段：基于组件的组装
+
 ```
 Query Analysis → Select Components → Assemble Context → Response
 ```
+
 **Context**: Like having modular building blocks that can be combined in different ways. Much more flexible - can create different combinations based on what's needed.
+**上下文** ：就像拥有可以以不同方式组合的模块化构建块。更加灵活 - 可以根据需要创建不同的组合。
 
 ### Stage 4: Optimization-Driven Assembly
+第 4 阶段：优化驱动的装配
+
 ```
 Query Analysis → Multi-Objective Optimization → Optimal Component Selection → 
     Intelligent Assembly → Performance Monitoring → Response
 ```
+
 **Context**: Like having a smart architect who considers multiple factors (space, cost, aesthetics, functionality) to create the optimal design for each specific project.
+**背景** ：就像拥有一位聪明的建筑师，他会考虑多种因素（空间、成本、美观、功能）来为每个特定项目创建最佳设计。
 
 ### Stage 5: Adaptive Dynamic Orchestration
+第 5 阶段：自适应动态编排
+
 ```
 Predictive Context Intelligence:
 - Anticipates information needs based on query patterns
@@ -56,60 +87,94 @@ Predictive Context Intelligence:
 - Continuously adapts to user preferences and task characteristics
 - Self-monitors and improves assembly quality over time
 ```
-**Context**: Like having an AI director who understands your thinking process, learns your preferences, anticipates what you'll need, and continuously improves their ability to provide exactly the right combination of elements for peak performance.
 
----
+**Context**: Like having an AI director who understands your thinking process, learns your preferences, anticipates what you'll need, and continuously improves their ability to provide exactly the right combination of elements for peak performance.
+**背景** ：就像拥有一位人工智能导演一样，他了解您的思维过程，了解您的偏好，预测您的需求，并不断提高他们提供正确元素组合以实现最佳性能的能力。
+
+* * *
 
 ## Mathematical Foundations of Dynamic Context Assembly
+动态上下文汇编的数学基础
 
 ### Context Assembly Optimization
+上下文装配优化
+
 Building on our foundational framework:
+基于我们的基础框架：
+
 ```
 C* = A*(c_instr, c_know, c_tools, c_mem, c_state, c_query)
 ```
 
-Where A* is the optimal assembly function that maximizes:
+Where A\* is the optimal assembly function that maximizes:
+其中 A\* 是最大化的最佳装配函数：
+
 ```
 A* = arg max_A E[Reward(LLM(A(c_1, c_2, ..., c_n)), Y*)] - λ·Cost(A)
 ```
 
-**Components:**
-- **Reward**: Quality of generated response
-- **Cost**: Computational and cognitive overhead of assembly
-- **λ**: Trade-off parameter between quality and efficiency
+**Components:
+组件：**
+
+*   **Reward**: Quality of generated response
+    **奖励** ：生成响应的质量
+*   **Cost**: Computational and cognitive overhead of assembly
+    **成本** ：汇编的计算和认知开销
+*   **λ**: Trade-off parameter between quality and efficiency
+    **λ**：质量与效率的权衡参数
 
 **Intuitive Explanation**: The optimal assembly function finds the best way to combine all available context components to maximize response quality while minimizing unnecessary complexity. It's like a master chef who knows exactly which ingredients to combine and in what proportions for the perfect dish.
+**直观的解释** ：最佳汇编函数找到组合所有可用上下文组件的最佳方式，以最大限度地提高响应质量，同时最大限度地减少不必要的复杂性。这就像一位大厨，他确切地知道将哪些食材组合在一起，以什么比例来制作出完美的菜肴。
 
 ### Multi-Objective Context Optimization
+多目标上下文优化
+
 ```
 maximize: [Relevance(C), Completeness(C), Clarity(C)]
 subject to: |C| ≤ L_max, Coherence(C) ≥ θ_min
 ```
 
 Where:
-- **Relevance(C)**: How well context addresses the query
-- **Completeness(C)**: How thoroughly context covers needed information
-- **Clarity(C)**: How easy context is to process and understand
-- **L_max**: Maximum context length constraint
-- **θ_min**: Minimum coherence threshold
+哪里：
+
+*   **Relevance(C)**: How well context addresses the query
+    **Relevance（C）：** 上下文处理查询的能力
+*   **Completeness(C)**: How thoroughly context covers needed information
+    **完整性 （C）：** 上下文涵盖所需信息的彻底程度
+*   **Clarity(C)**: How easy context is to process and understand
+    **清晰度（C）：** 上下文的处理和理解有多容易
+*   **L\_max**: Maximum context length constraint
+    **L\_max**：最大上下文长度约束
+*   **θ\_min**: Minimum coherence threshold
+    **θ\_min**：最小相干阈值
 
 **Intuitive Explanation**: Context assembly is a multi-objective optimization problem - we want maximum relevance, completeness, and clarity, but these goals sometimes conflict. The optimal solution finds the best balance given our constraints.
+**直观的解释** ：上下文组装是一个多目标优化问题——我们想要最大的相关性、完整性和清晰度，但这些目标有时会发生冲突。在给定我们的约束的情况下，最优解找到最佳平衡。
 
 ### Information-Theoretic Assembly
+信息论组装
+
 ```
 Optimal_Components = arg max_S ∑(i∈S) I(Y*; c_i) - α·∑(i,j∈S) I(c_i; c_j)
 ```
 
 Where:
-- **I(Y*; c_i)**: Mutual information between component c_i and optimal response Y*
-- **I(c_i; c_j)**: Mutual information between components (redundancy)
-- **α**: Redundancy penalty parameter
+哪里：
+
+*   **I(Y*; c\_i)\*\*: Mutual information between component c\_i and optimal response Y
+    *I（Y*;c\_i）\*\*：分量 c\_i 与最优响应 Y 之间的互信息*
+*   **I(c\_i; c\_j)**: Mutual information between components (redundancy)
+    **I（c\_i; c\_j）**：组件之间的互信息（冗余）
+*   **α**: Redundancy penalty parameter
+    **α**：冗余惩罚参数
 
 **Intuitive Explanation**: Choose context components that provide the most information about the correct answer while minimizing redundancy between components. It's like selecting a team where each member contributes unique valuable skills without overlap.
+**直观的解释** ：选择上下文组件，提供有关正确答案的最多信息，同时最大限度地减少组件之间的冗余。这就像选择一个团队，每个成员都贡献独特的宝贵技能，没有重叠。
 
----
+* * *
 
 ## Visual Architecture: Dynamic Context Assembly System
+可视化架构：动态上下文汇编系统
 
 ```
                     ┌─────────────────────────────────────────────────────┐
@@ -158,15 +223,22 @@ Where:
 ```
 
 **Ground-up Explanation**: This architecture shows how dynamic context assembly works at multiple levels:
-- **Bottom Layer**: All the different sources of context components (static templates, dynamic retrieval, user info, system state, learned patterns)
-- **Middle Layer**: Selection and processing of specific components (instructions, knowledge, tools, memory, examples)  
-- **Top Layer**: Intelligent orchestration that optimizes how components are combined, manages composition quality, and adapts based on outcomes
+**从头开始解释** ：此架构显示了动态上下文汇编如何在多个级别上工作：
 
----
+*   **Bottom Layer**: All the different sources of context components (static templates, dynamic retrieval, user info, system state, learned patterns)
+    **底层** ：上下文组件的所有不同来源（静态模板、动态检索、用户信息、系统状态、学习模式）
+*   **Middle Layer**: Selection and processing of specific components (instructions, knowledge, tools, memory, examples)
+    **中间层** ：特定组件（指令、知识、工具、内存、示例）的选择和处理
+*   **Top Layer**: Intelligent orchestration that optimizes how components are combined, manages composition quality, and adapts based on outcomes
+    **顶层** ：智能编排，可优化组件的组合方式、管理组合质量并根据结果进行调整
+
+* * *
 
 ## Software 3.0 Paradigm 1: Prompts (Dynamic Assembly Templates)
+软件 3.0 范式 1：提示（动态装配模板）
 
 ### Multi-Component Context Assembly Template
+多组件上下文装配模板
 
 ```markdown
 # Dynamic Context Assembly Framework
@@ -250,9 +322,10 @@ After response generation, evaluate:
 ```
 
 **Ground-up Explanation**: This template creates a systematic approach to context assembly where each component is deliberately selected and weighted based on the specific needs of the query. It's like having a master architect who not only designs the building but documents every decision and can learn from the success or failure of the final structure.
-
+**从头开始的解释** ：该模板创建了一种系统的上下文组装方法，其中每个组件都是根据查询的特定需求故意选择和加权的。这就像拥有一位建筑大师，他不仅设计建筑，还记录每一个决定，并可以从最终结构的成败中学习。
 
 ### Adaptive Context Strategy Template
+自适应上下文策略模板
 
 ```xml
 <adaptive_context_strategy name="intelligent_context_composer">
@@ -369,12 +442,15 @@ After response generation, evaluate:
 ```
 
 **Ground-up Explanation**: This XML strategy template creates an intelligent system that can analyze any query and automatically determine the optimal way to assemble context. It's like having a master chef who can look at ingredients and diners' preferences and instantly know the perfect recipe and preparation method for that specific situation.
+**从头开始解释** ：此 XML 策略模板创建了一个智能系统，可以分析任何查询并自动确定组装上下文的最佳方式。这就像有一位大厨，他可以查看食材和食客的喜好，并立即知道适合特定情况的完美食谱和准备方法。
 
----
+* * *
 
 ## Software 3.0 Paradigm 2: Programming (Dynamic Assembly Systems)
+软件 3.0 范式 2：编程（动态装配系统）
 
 ### Advanced Context Assembly Engine
+高级上下文装配引擎
 
 ```python
 import numpy as np
@@ -895,12 +971,12 @@ if __name__ == "__main__":
 ```
 
 **Ground-up Explanation**: This implementation creates a sophisticated context assembly system that can analyze any query, understand what type of response approach would work best, select the optimal combination of context components, and assemble them in the most effective way. It's like having an intelligent director who can instantly understand a script and assemble the perfect cast, set, and direction for that specific story.
+**从头开始的解释** ：此实现创建了一个复杂的上下文汇编系统，可以分析任何查询，了解哪种类型的响应方法最有效，选择上下文组件的最佳组合，并以最有效的方式组装它们。这就像拥有一位聪明的导演，他可以立即理解剧本并为特定故事组建完美的演员阵容、布景和导演。
 
----
-
-
+* * *
 
 ### Self-Optimizing Context Assembly Protocol
+自优化上下文汇编协议
 
 ```
 /context.assembly.adaptive{
@@ -973,12 +1049,15 @@ if __name__ == "__main__":
 ```
 
 **Ground-up Explanation**: This protocol creates a context assembly system that functions like a master orchestra conductor who not only knows how to arrange different musical sections for any piece, but continuously learns from audience reactions to become better at creating the perfect musical experience for each specific performance and audience.
+从**头开始的解释** ：该协议创建了一个上下文汇编系统，其功能就像管弦乐队指挥大师，他不仅知道如何为任何作品安排不同的音乐部分，而且不断从观众的反应中学习，以更好地为每个特定的表演和观众创造完美的音乐体验。
 
----
+* * *
 
 ## Advanced Context Assembly Applications
+高级上下文汇编应用程序
 
 ### Case Study: Multi-Modal Context Integration
+案例研究：多模态上下文集成
 
 ```python
 def demonstrate_multimodal_context_assembly():
@@ -1085,6 +1164,7 @@ def demonstrate_adaptive_expertise_assembly():
 ```
 
 ### Performance Optimization and Benchmarking
+性能优化和基准测试
 
 ```python
 class ContextAssemblyBenchmark:
@@ -1375,13 +1455,18 @@ benchmark_results, recommendations = run_assembly_benchmark_demo()
 ```
 
 **Ground-up Explanation**: This benchmarking system works like having a comprehensive testing laboratory for context assembly approaches. It evaluates multiple dimensions of performance and provides specific, actionable recommendations for improvement, similar to how a performance coach analyzes an athlete's technique and provides targeted training suggestions.
+**从头开始的解释** ：这个基准测试系统的工作原理就像拥有一个针对上下文组装方法的综合测试实验室。它评估表现的多个维度，并提供具体的、可行的改进建议，类似于表现教练分析运动员的技术并提供有针对性的训练建议的方式。
 
----
+* * *
 
 ## Practical Exercises and Implementation Challenges
+实践练习和实施挑战
 
 ### Exercise 1: Build Dynamic Context Assembler
+练习 1：构建动态上下文汇编器
+
 **Goal**: Create a context assembler that adapts strategy based on query characteristics
+**目标** ：创建一个上下文汇编器，根据查询特征调整策略
 
 ```python
 # Your implementation challenge
@@ -1420,7 +1505,10 @@ assembler = AdaptiveContextAssembler()
 ```
 
 ### Exercise 2: Multi-Objective Context Optimization
+练习 2：多目标上下文优化
+
 **Goal**: Build system that optimizes context for multiple competing objectives
+**目标** ：构建针对多个竞争目标优化上下文的系统
 
 ```python
 class MultiObjectiveContextOptimizer:
@@ -1457,7 +1545,10 @@ optimizer = MultiObjectiveContextOptimizer()
 ```
 
 ### Exercise 3: Self-Improving Assembly System
+练习 3：自我改进装配系统
+
 **Goal**: Create system that learns and improves assembly strategies over time
+**目标** ：创建能够随着时间的推移学习和改进装配策略的系统
 
 ```python
 class SelfImprovingAssemblySystem:
@@ -1497,87 +1588,142 @@ class SelfImprovingAssemblySystem:
 learning_system = SelfImprovingAssemblySystem()
 ```
 
----
+* * *
 
 ## Research Connections and Future Directions
+研究联系和未来方向
 
 ### Connection to Context Engineering Survey
+与环境工程调查的联系
 
 **Dynamic Assembly and Context Processing (§4.2)**:
-- Our implementations extend context processing beyond basic assembly to intelligent orchestration
-- Advanced integration of component selection with performance optimization
-- Novel approaches to multi-objective context optimization
+**动态汇编和上下文处理 （§4.2）：**
+
+*   Our implementations extend context processing beyond basic assembly to intelligent orchestration
+    我们的实现将上下文处理从基本汇编扩展到智能编排
+*   Advanced integration of component selection with performance optimization
+    组件选择与性能优化的高级集成
+*   Novel approaches to multi-objective context optimization
+    多目标上下文优化的新方法
 
 **Context Management Challenges (§4.3)**:
-- Addresses context window management through intelligent component selection
-- Solves activation refilling through dynamic assembly strategies
-- Handles hierarchical memory through adaptive component integration
+**上下文管理挑战 （§4.3）：**
+
+*   Addresses context window management through intelligent component selection
+    通过智能组件选择解决上下文窗口管理问题
+*   Solves activation refilling through dynamic assembly strategies
+    通过动态装配策略解决活化再填充问题
+*   Handles hierarchical memory through adaptive component integration
+    通过自适应组件集成处理分层内存
 
 ### Novel Contributions Beyond Current Research
+超越当前研究的新贡献
 
 **Multi-Objective Context Optimization**: Our approach to balancing competing objectives (relevance, completeness, efficiency, clarity) in context assembly represents novel research in optimization-driven context engineering.
+**多目标上下文优化** ：我们在上下文组装中平衡竞争目标（相关性、完整性、效率、清晰度）的方法代表了优化驱动的上下文工程的新颖研究。
 
 **Adaptive Assembly Strategies**: Context assembly systems that learn optimal strategies from performance feedback and adapt to different query types represent frontier research.
+**自适应汇编策略** ：从性能反馈中学习最佳策略并适应不同查询类型的上下文汇编系统代表了前沿研究。
 
 **Self-Improving Context Orchestration**: Systems that continuously improve their context assembly capabilities through pattern learning and performance optimization extend current research directions.
+**自我改进的上下文编排** ：通过模式学习和性能优化不断提高上下文组装能力的系统扩展了当前的研究方向。
 
 ### Future Research Directions
+未来的研究方向
 
 **Neural Context Assembly**: Using neural networks to learn optimal context assembly patterns directly from large-scale performance data.
+**神经上下文汇编** ：使用神经网络直接从大规模性能数据中学习最佳上下文汇编模式。
 
 **Collaborative Context Engineering**: Multi-agent systems that collaborate to assemble context, with each agent contributing specialized components.
+**协作上下文工程** ：协作组装上下文的多代理系统，每个代理都贡献专门的组件。
 
 **Personalized Context Optimization**: Context assembly systems that adapt not just to query characteristics but to individual user preferences, expertise, and success patterns.
+**个性化上下文优化** ：上下文汇编系统不仅适应查询特征，还适应个人用户偏好、专业知识和成功模式。
 
 **Cross-Modal Context Integration**: Assembly systems that can seamlessly integrate text, visual, audio, and structured data into unified context representations.
+**跨模态上下文集成** ：可以将文本、视觉、音频和结构化数据无缝集成到统一上下文表示中的汇编系统。
 
----
+* * *
 
 ## Summary and Next Steps
+总结和后续步骤
 
 ### Core Concepts Mastered
+掌握核心概念
 
 **Dynamic Context Assembly Fundamentals**:
-- Multi-component context orchestration with intelligent selection
-- Strategy-based assembly with adaptive selection based on query characteristics
-- Multi-objective optimization balancing relevance, completeness, efficiency, and clarity
-- Real-time assembly adaptation based on performance feedback
+**动态上下文汇编基础知识** ：
+
+*   Multi-component context orchestration with intelligent selection
+    具有智能选择功能的多组件上下文编排
+*   Strategy-based assembly with adaptive selection based on query characteristics
+    基于策略的汇编，基于查询特征的自适应选择
+*   Multi-objective optimization balancing relevance, completeness, efficiency, and clarity
+    多目标优化平衡相关性、完整性、效率和清晰度
+*   Real-time assembly adaptation based on performance feedback
+    基于性能反馈的实时装配适配
 
 **Advanced Assembly Techniques**:
-- Component synergy optimization for multiplicative rather than additive value
-- Cognitive load management while maximizing information utility
-- Cross-modal information integration and coherence management
-- Expertise-level adaptation and personalized assembly strategies
+**先进的组装技术** ：
+
+*   Component synergy optimization for multiplicative rather than additive value
+    乘法而非加法值的组件协同优化
+*   Cognitive load management while maximizing information utility
+    认知负荷管理，同时最大限度地提高信息效用
+*   Cross-modal information integration and coherence management
+    跨模态信息集成与连贯管理
+*   Expertise-level adaptation and personalized assembly strategies
+    专业级适应和个性化装配策略
 
 **Self-Improving Systems**:
-- Performance-driven strategy evolution and pattern learning
-- Continuous optimization based on outcome feedback
-- Predictive assembly effectiveness assessment
-- Automated discovery of new optimization opportunities
+**自我改进的系统** ：
+
+*   Performance-driven strategy evolution and pattern learning
+    绩效驱动的策略演进和模式学习
+*   Continuous optimization based on outcome feedback
+    基于结果反馈的持续优化
+*   Predictive assembly effectiveness assessment
+    预测性装配有效性评估
+*   Automated discovery of new optimization opportunities
+    自动发现新的优化机会
 
 ### Software 3.0 Integration
+软件 3.0 集成
 
-**Prompts**: Dynamic assembly templates that adapt structure and content based on context requirements
-**Programming**: Sophisticated assembly engines with multi-objective optimization and adaptive strategy selection
-**Protocols**: Self-improving orchestration systems that learn optimal assembly patterns from performance data
+**Prompts**: Dynamic assembly templates that adapt structure and content based on context requirements **Programming**: Sophisticated assembly engines with multi-objective optimization and adaptive strategy selection **Protocols**: Self-improving orchestration systems that learn optimal assembly patterns from performance data
+**提示** ：动态装配模板，可根据上下文要求调整结构和内容 **编程** ：具有多目标优化和自适应策略选择的复杂装配引擎 **协议** ：自我改进的编排系统，从性能数据中学习最佳汇编模式
 
 ### Implementation Skills
+实施技巧
 
-- Design and implement multi-strategy context assembly systems with adaptive selection
-- Build multi-objective optimization frameworks for balancing competing context requirements
-- Create self-improving systems that learn better assembly patterns from performance feedback
-- Develop comprehensive benchmarking and optimization frameworks for assembly effectiveness
+*   Design and implement multi-strategy context assembly systems with adaptive selection
+    设计和实施具有自适应选择的多策略上下文组装系统
+*   Build multi-objective optimization frameworks for balancing competing context requirements
+    构建多目标优化框架，以平衡相互竞争的上下文需求
+*   Create self-improving systems that learn better assembly patterns from performance feedback
+    创建自我改进的系统，从性能反馈中学习更好的装配模式
+*   Develop comprehensive benchmarking and optimization frameworks for assembly effectiveness
+    为装配效率制定全面的基准测试和优化框架
 
 ### Research Grounding
+研究基础
 
 Direct implementation and extension of context management research (§4.3) with novel contributions in:
-- Multi-objective context optimization with competing constraint management
-- Adaptive assembly strategy selection based on query and user characteristics
-- Self-improving context orchestration with performance-driven evolution
-- Cross-modal context integration and coherence optimization
+直接实施和扩展情境管理研究（§4.3），在以下方面做出了新的贡献：
+
+*   Multi-objective context optimization with competing constraint management
+    具有竞争约束管理的多目标上下文优化
+*   Adaptive assembly strategy selection based on query and user characteristics
+    基于查询和用户特征的自适应装配策略选择
+*   Self-improving context orchestration with performance-driven evolution
+    通过性能驱动的演进进行自我改进的上下文编排
+*   Cross-modal context integration and coherence optimization
+    跨模态上下文集成和一致性优化
 
 **Next Steps**: With foundational context engineering mastered, you're ready to advance to sophisticated system implementations including memory systems (Module 05), tool-integrated reasoning (Module 06), and multi-agent orchestration (Module 07).
+**后续步骤** ：掌握基础上下文工程后，您就可以进入复杂的系统实现，包括内存系统（模块 05）、工具集成推理（模块 06）和多代理编排（模块 07）。
 
----
+* * *
 
-*This module completes the foundational trilogy of context engineering - advanced prompting, external knowledge integration, and dynamic assembly - providing the core capabilities needed for sophisticated context orchestration and intelligent information management systems.*
+*This module completes the foundational trilogy of context engineering - advanced prompting, external knowledge integration, and dynamic assembly - providing the core capabilities needed for sophisticated context orchestration and intelligent information management systems.
+本模块完成了上下文工程的基础三部曲——高级提示、外部知识集成和动态汇编——提供了复杂的上下文编排和智能信息管理系统所需的核心功能。*
