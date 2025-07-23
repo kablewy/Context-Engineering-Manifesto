@@ -1,25 +1,41 @@
 # Modular RAG Architectures: Component-Based Systems
+模块化 RAG 架构：基于组件的系统
 
 ## Overview
+概述
 
 Modular RAG architectures represent the evolution of monolithic retrieval-augmented generation systems into flexible, composable frameworks where individual components can be independently developed, optimized, and deployed. This approach exemplifies Software 3.0 principles by integrating structured prompting (communication), modular programming (implementation), and protocol orchestration (coordination) into unified, adaptable systems.
+模块化 RAG 架构代表了单体检索增强生成系统向灵活、可组合框架的演进，其中各个组件可以独立开发、优化和部署。这种方法通过将结构化提示（通信）、模块化编程（实现）和协议编排（协调）集成到统一、可适应的系统中，体现了软件 3.0 原则。
 
 ## The Three Paradigms in Modular RAG
+模块化 RAG 中的三种范式
 
 ### PROMPTS: Communication Layer
-Template-based interfaces that define how components communicate and coordinate their operations.
+提示：通信层
 
-### PROGRAMMING: Implementation Layer  
+Template-based interfaces that define how components communicate and coordinate their operations.
+基于模板的界面，定义组件如何通信和协调其操作。
+
+### PROGRAMMING: Implementation Layer
+编程：实现层
+
 Modular code components that can be independently developed, tested, and optimized.
+可独立开发、测试和优化的模块化代码组件。
 
 ### PROTOCOLS: Orchestration Layer
+协议：编排层
+
 High-level coordination specifications that define how components work together to achieve complex RAG workflows.
+定义组件如何协同工作以实现复杂 RAG 工作流的抽象协调规范。
 
 ## Theoretical Foundations
+理论基础
 
 ### Modular Decomposition Principle
+模块分解原理
 
 The modular RAG framework decomposes the traditional RAG pipeline into discrete, interchangeable components following Software 3.0 principles:
+模块化的 RAG 框架遵循软件 3.0 原则，将传统的 RAG 流程分解为离散的、可互换的组件：
 
 ```
 RAG_System = Protocol_Orchestrate(
@@ -30,11 +46,17 @@ RAG_System = Protocol_Orchestrate(
 ```
 
 Where:
-- `Tᵢ`: Prompt templates for component communication
-- `Rⱼ, Pⱼ`: Programming components (retrieval, processing, generation)
-- `Cₖ`: Protocol specifications for component coordination
+其中：
+
+*   `Tᵢ`: Prompt templates for component communication
+    `Tᵢ` ：组件通信的提示模板
+*   `Rⱼ, Pⱼ`: Programming components (retrieval, processing, generation)
+    `Rⱼ, Pⱼ` ：编程组件（检索、处理、生成）
+*   `Cₖ`: Protocol specifications for component coordination
+    `Cₖ` ：组件协调的协议规范
 
 ### Software 3.0 Integration Framework
+软件 3.0 集成框架
 
 ```
 SOFTWARE 3.0 RAG ARCHITECTURE
@@ -60,10 +82,13 @@ Layer 3: PROTOCOL ORCHESTRATION (Coordination)
 ```
 
 ## Progressive Complexity Layers
+渐进式复杂度层
 
 ### Layer 1: Basic Modular Components (Foundation)
+第 1 层：基础模块组件（基础）
 
 #### Prompt Templates for Component Communication
+组件通信的提示模板
 
 ```
 COMPONENT_INTERFACE_TEMPLATE = """
@@ -89,6 +114,7 @@ COMPONENT_INTERFACE_TEMPLATE = """
 ```
 
 #### Basic Programming Components
+基础编程组件
 
 ```python
 class BaseRAGComponent:
@@ -118,6 +144,7 @@ class BaseRAGComponent:
 ```
 
 #### Simple Protocol Coordination
+简单协议协调
 
 ```
 /rag.component.basic{
@@ -144,8 +171,10 @@ class BaseRAGComponent:
 ```
 
 ### Layer 2: Adaptive Modular Systems (Intermediate)
+第二层：自适应模块系统（中级）
 
 #### Advanced Prompt Templates with Context Awareness
+具有上下文感知能力的高级提示模板
 
 ```
 ADAPTIVE_COMPONENT_TEMPLATE = """
@@ -177,6 +206,7 @@ Based on current context and performance history:
 ```
 
 #### Intelligent Component Programming
+智能组件编程
 
 ```python
 class AdaptiveRAGComponent(BaseRAGComponent):
@@ -239,6 +269,7 @@ class AdaptiveRAGComponent(BaseRAGComponent):
 ```
 
 #### Protocol-Based Component Orchestration
+基于协议的组件编排
 
 ```
 /rag.component.adaptive{
@@ -288,8 +319,10 @@ class AdaptiveRAGComponent(BaseRAGComponent):
 ```
 
 ### Layer 3: Self-Evolving Modular Ecosystems (Advanced)
+第三层：自进化模块化生态系统（高级）
 
 #### Meta-Learning Prompt Templates
+元学习提示模板
 
 ```
 META_LEARNING_COMPONENT_TEMPLATE = """
@@ -327,6 +360,7 @@ Learning Objectives: {learning_goals}
 ```
 
 #### Self-Evolving Component Architecture
+自进化组件架构
 
 ```python
 class EvolvingRAGComponent(AdaptiveRAGComponent):
@@ -406,6 +440,7 @@ class EvolvingRAGComponent(AdaptiveRAGComponent):
 ```
 
 #### Ecosystem-Level Protocol Orchestration
+生态系统级协议编排
 
 ```
 /rag.ecosystem.evolution{
@@ -483,8 +518,10 @@ class EvolvingRAGComponent(AdaptiveRAGComponent):
 ```
 
 ## Component Architecture Patterns
+组件架构模式
 
-### 1. Retrieval Component Ecosystem
+### 1\. Retrieval Component Ecosystem
+1\. 检索组件生态系统
 
 ```
 MODULAR RETRIEVAL ARCHITECTURE
@@ -526,7 +563,8 @@ MODULAR RETRIEVAL ARCHITECTURE
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 2. Processing Component Pipeline
+### 2\. Processing Component Pipeline
+2\. 处理组件管道
 
 ```python
 class ModularProcessingPipeline:
@@ -592,7 +630,8 @@ class ModularProcessingPipeline:
         return selected
 ```
 
-### 3. Generation Component Orchestration
+### 3\. Generation Component Orchestration
+3\. 生成组件编排
 
 ```
 GENERATION COMPONENT COORDINATION
@@ -637,8 +676,10 @@ Input: Retrieved and Processed Context + User Query
 ```
 
 ## Integration Examples
+集成示例
 
 ### Complete Modular RAG System
+完整的模块化 RAG 系统
 
 ```python
 class ModularRAGSystem:
@@ -690,8 +731,10 @@ class ModularRAGSystem:
 ```
 
 ## Advanced Integration Patterns
+高级集成模式
 
 ### Cross-Component Learning
+跨组件学习
 
 ```
 /component.ecosystem.learning{
@@ -735,8 +778,10 @@ class ModularRAGSystem:
 ```
 
 ## Performance and Scalability
+性能与可扩展性
 
 ### Horizontal Scaling Architecture
+水平扩展架构
 
 ```
 DISTRIBUTED MODULAR RAG SYSTEM
@@ -770,21 +815,33 @@ DISTRIBUTED MODULAR RAG SYSTEM
 ```
 
 ## Future Evolution
+未来进化
 
 ### Self-Assembling Component Ecosystems
+自组装组件生态系统
 
 The next generation of modular RAG systems will feature:
+下一代模块化 RAG 系统将具备以下特点：
 
-1. **Autonomous Component Discovery**: Components that can automatically discover and integrate new capabilities
-2. **Dynamic Architecture Evolution**: Systems that restructure themselves based on changing requirements  
-3. **Emergent Capability Formation**: Novel capabilities emerging from component interactions
-4. **Cross-System Learning**: Components learning from deployments across different systems
-5. **Continuous Optimization**: Real-time system optimization without downtime
+1.  **Autonomous Component Discovery**: Components that can automatically discover and integrate new capabilities
+    自主组件发现：能够自动发现和集成新功能的组件
+2.  **Dynamic Architecture Evolution**: Systems that restructure themselves based on changing requirements
+    动态架构演化：根据不断变化的需求自我重构的系统
+3.  **Emergent Capability Formation**: Novel capabilities emerging from component interactions
+    涌现能力形成：从组件交互中产生的全新能力
+4.  **Cross-System Learning**: Components learning from deployments across different systems
+    跨系统学习：组件从不同系统的部署中学习
+5.  **Continuous Optimization**: Real-time system optimization without downtime
+    持续优化：无需停机即可进行实时系统优化
 
 ## Conclusion
+结论
 
 Modular RAG architectures represent the practical realization of Software 3.0 principles in context engineering. By integrating structured prompting for communication, modular programming for implementation, and protocol orchestration for coordination, these systems achieve unprecedented flexibility, scalability, and adaptability.
+模块化 RAG 架构代表了在情境工程中实现软件 3.0 原则的实际应用。通过整合用于通信的结构化提示、用于实现的模块化编程以及用于协调的协议编排，这些系统实现了前所未有的灵活性、可扩展性和适应性。
 
 The progressive complexity layers—from basic modular components through adaptive systems to self-evolving ecosystems—demonstrate the potential for building increasingly sophisticated AI systems that remain manageable, understandable, and effective. As these architectures continue to evolve, they will enable the creation of AI systems that can autonomously adapt to new challenges while maintaining reliability and transparency.
+从基本模块组件到自适应系统再到自我进化的生态系统，逐步复杂化的层次展示了构建日益复杂的 AI 系统的潜力，同时这些系统仍然保持可管理性、可理解性和有效性。随着这些架构的持续演进，它们将能够创建能够自主适应新挑战，同时保持可靠性和透明度的 AI 系统。
 
 The next document will explore agentic RAG systems, where these modular components gain autonomous reasoning capabilities and can actively plan and execute complex information gathering strategies.
+下一份文档将探讨代理式 RAG 系统，在这些系统中，模块化组件获得了自主推理能力，能够主动规划和执行复杂的信息收集策略。
