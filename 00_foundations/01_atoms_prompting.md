@@ -142,7 +142,9 @@ For many tasks, we observe a power law relationship between context tokens and o
           [Maximum ROI Zone]       [Diminishing Returns]
 ```
 
-The critical insight: there's a "maximum ROI zone" where adding just a few tokens yields dramatic quality improvements.
+The critical insight: there's a "maximum ROI zone" where adding just a few tokens yields dramatic quality improvements as well as "diminishing returns", where adding more tokens instead degrades performance.
+
+## [Read more on Context Rot](https://research.trychroma.com/context-rot)
 
 ## From Atoms to Molecules: The Need for More Context
 
