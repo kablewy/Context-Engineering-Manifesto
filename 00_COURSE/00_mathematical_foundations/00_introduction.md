@@ -199,7 +199,8 @@ class MathematicalContextOptimizer:
 
 ### Paradigm 3: Protocols (Mathematical Evolution)
 
-**Self-Improving Mathematical Systems**:
+**Orchestration Patterns and Self-Improving Systems**:
+
 ```
 /mathematical.optimization.evolving{
     intent="Continuously improve mathematical models through learning",
