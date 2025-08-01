@@ -15,6 +15,8 @@
 
 <div align="center">
   
+ ## [DeepGraph](https://www.deepgraph.co/davidkimai/Context-Engineering)
+ 
 ## [Chat with NotebookLM + Podcast Deep Dive](https://notebooklm.google.com/notebook/0c6e4dc6-9c30-4f53-8e1a-05cc9ff3bc7e)
 
 ## [![Discord](https://img.shields.io/badge/Discord-join%20chat-7289DA.svg?logo=discord")](https://discord.gg/pCM6kdxB)
