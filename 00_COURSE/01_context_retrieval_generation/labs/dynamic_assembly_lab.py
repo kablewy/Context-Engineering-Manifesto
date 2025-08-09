@@ -8,6 +8,36 @@
 # 4. Measure and evaluate assembly quality and performance
 # 5. Create reusable assembly patterns for production systems
 
+"""
+Dynamic Assembly Lab: Context Orchestration
+==========================================
+
+Context Engineering Course - Module 01 Laboratory
+Based on principles from Context Engineering Survey (arXiv:2507.13334)
+
+This lab offers practical, hands-on experience with dynamic context assembly
+and orchestration techniques, essential for scalable and adaptable AI systems.
+Participants will explore mathematical formalisms, implement optimization-driven
+assembly functions, and integrate components into robust, reusable patterns.
+
+Learning Objectives:
+- Understand mathematical formalization of context assembly: C = A(c₁, c₂, ..., cₙ)
+- Implement practical assembly functions with optimization strategies
+- Build component integration patterns for diverse use cases
+- Measure and evaluate context assembly quality and performance
+- Create reusable assembly patterns for production-grade systems
+
+Usage:
+    # For Jupyter/Colab
+    %run dynamic_assembly_lab.py
+    
+    # For direct execution
+    python dynamic_assembly_lab.py
+    
+    # For import
+    from dynamic_assembly_lab import *
+"""
+
 import json
 import time
 import math
