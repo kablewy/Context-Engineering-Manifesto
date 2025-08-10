@@ -12,9 +12,9 @@
 
 ---
 
-## From Restaurant Experience to Mathematical Framework
+## From Cooking Experience to Mathematical Framework
 
-In our introduction, we used the restaurant analogy to understand context assembly. Now we'll transform that intuitive understanding into precise mathematical language that enables systematic optimization and implementation through our three foundational paradigms.
+In our introduction, we used the cooking analogy to understand context assembly. Now we'll transform that intuitive understanding into precise mathematical language that enables systematic optimization and implementation through our three foundational paradigms.
 
 ### The Bridge: From Metaphor to Mathematics
 
