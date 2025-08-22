@@ -975,6 +975,7 @@ You've now completed the foundations series, exploring the complete progression 
 2. Explore the reusable templates in `20_templates/` for quick implementation
 3. Study the complete examples in `30_examples/` to see these principles in action
 4. Reference the detailed documentation in `40_reference/` for deeper understanding
+5. Keep reading the advacend parts of the foundation series: [Continue to 05_cognitive_tools.md →](05_cognitive_tools.md)
 
 The path you choose depends on your learning style and goals. Whatever direction you take, you now have the fundamental knowledge needed to become a skilled context engineer.
 
