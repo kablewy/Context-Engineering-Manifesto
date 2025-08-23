@@ -3,7 +3,7 @@
 Long Context Evaluation - Performance Measurement
 =================================================
 
-Production-ready benchmarking system for long context processing.
+Benchmarking system for long context processing.
 Minimal code, maximal signal ratio.
 
 Usage:
