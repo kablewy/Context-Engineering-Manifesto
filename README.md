@@ -365,16 +365,16 @@ Context-Engineering/
 
 ## Quick Start
 
-1. **Read `00_foundations/01_atoms_prompting.md`** (5 min)  
+1. **Read [`00_foundations/01_atoms_prompting.md`](00_foundations/01_atoms_prompting.md)** (5 min)  
    Understand why prompts alone often underperform
 
-2. **Run `10_guides_zero_to_one/01_min_prompt.py (Jupyter Notebook style)`**  
+2. **Run [`10_guides_zero_to_hero/01_min_prompt.py`](10_guides_zero_to_hero/01_min_prompt.py)**  (Jupyter Notebook style) 
    Experiment with a minimal working example
 
-3. **Explore `20_templates/minimal_context.yaml`**  
+3. **Explore [`20_templates/minimal_context.yaml`](20_templates/minimal_context.yaml)**  
    Copy/paste a template into your own project  
 
-4. **Study `30_examples/00_toy_chatbot/`**  
+4. **Study [`30_examples/00_toy_chatbot/`](30_examples/00_toy_chatbot/)**  
    See a complete implementation with context management
 
 ## Learning Path
