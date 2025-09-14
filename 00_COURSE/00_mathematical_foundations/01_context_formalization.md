@@ -12,9 +12,9 @@
 
 ---
 
-## From Restaurant Experience to Mathematical Framework
+## From Cooking Experience to Mathematical Framework
 
-In our introduction, we used the restaurant analogy to understand context assembly. Now we'll transform that intuitive understanding into precise mathematical language that enables systematic optimization and implementation through our three foundational paradigms.
+In our introduction, we used the cooking analogy to understand context assembly. Now we'll transform that intuitive understanding into precise mathematical language that enables systematic optimization and implementation through our three foundational paradigms.
 
 ### The Bridge: From Metaphor to Mathematics
 
@@ -54,14 +54,14 @@ c₆ = Query (immediate user request, specific question)
 
 ```
     [c₁: Instructions] ──┐
-    [c₂: Knowledge]   ──┤
-    [c₃: Tools]       ──┼── A(·) ──→ [Context C] ──→ LLM ──→ [Output Y]
-    [c₄: Memory]      ──┤
-    [c₅: State]       ──┤
-    [c₆: Query]       ──┘
-                        ↑
-                   Assembly
-                   Function
+    [c₂: Knowledge]    ──┤
+    [c₃: Tools]        ──┼── A(·) ──→ [Context C] ──→ LLM ──→ [Output Y]
+    [c₄: Memory]       ──┤   ↑
+    [c₅: State]        ──┤   |
+    [c₆: Query]        ──┘   |
+                             |
+                          Assembly
+                          Function
 ```
 
 ### Why This Mathematical Form Enables the Three Paradigms
@@ -80,6 +80,7 @@ Prompts provide reusable patterns for context formalization that ensure consiste
 
 #### Instructions Template (c₁)
 
+<pre>
 ```markdown
 # Instructions Component Template (c₁)
 
@@ -111,6 +112,7 @@ Structure all responses with:
 - Clarity: Use accessible language appropriate for audience
 - Actionability: Provide concrete, implementable guidance
 ```
+</pre>
 
 **Ground-up Explanation**: This template creates consistent AI behavior by systematically defining role, constraints, and output expectations. Like a job description that ensures everyone understands their responsibilities and standards.
 
